@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Modern Public Ivies</title>
+<style>
+  :root {
+    --ink: #16182b;
+    --muted: #5b5f7a;
+    --accent: #7c3aed;
+    --accent-2: #0ea5a4;
+    --accent-warm: #f59e0b;
+    --accent-light: #f3eeff;
+    --card-bg: #ffffff;
+    --border: #e7e5f5;
+    --bg: #faf9ff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 500px at 50% -10%, #efe9ff 0%, rgba(239,233,255,0) 60%),
+      var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+  }
+
+  header.hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  header.hero .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    background: var(--accent-light);
+    border-radius: 999px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 0 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    background: linear-gradient(120deg, var(--ink) 40%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 28px;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+    box-shadow: 0 2px 8px rgba(90, 60, 180, 0.06);
+  }
+
+  .hero-stat span {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  section {
+    margin-bottom: 64px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+
+  p {
+    font-size: 1.03rem;
+    color: #2b2b40;
+    margin: 0 0 16px;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  strong.hl {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Methodology */
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .method-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.04);
+  }
+
+  .method-num {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  .method-card h4 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .method-card p {
+    margin: 0;
+    font-size: 0.96rem;
+    color: var(--muted);
+  }
+
+  .method-note {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--accent-warm);
+    background: #fffaf0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #6b5320;
+  }
+
+
+  /* Map */
+  .map-wrap {
+    margin-top: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+  }
+
+  .map-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .map-legend {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 18px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .map-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+
+  .map-legend-item strong {
+    display: block;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .map-legend-item span:not(.map-legend-dot) {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .map-legend-dot {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-key {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .map-key-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .map-key-dot {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px var(--border);
+  }
+
+  .map-key-diamond {
+    flex: 0 0 auto;
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    background: #5b5f7a;
+    transform: rotate(45deg);
+  }
+
+  @media (min-width: 620px) {
+    .map-legend { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* On The Map */
+  .fame-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .fame-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.04);
+    border-left: 4px solid var(--c1, var(--accent));
+  }
+
+  .fame-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--c1, var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .fame-card h4 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .fame-card p {
+    margin: 0;
+    padding-left: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  @media (min-width: 620px) {
+    .fame-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* Honorable mentions */
+  .honorable-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .honorable-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+  }
+
+  .honorable-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .honorable-num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+  }
+
+  .honorable-card-header h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .honorable-point {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .honorable-point:last-child {
+    margin-bottom: 0;
+  }
+
+  .honorable-point .label {
+    flex: 0 0 auto;
+    font-weight: 800;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    height: fit-content;
+    white-space: nowrap;
+  }
+
+  .honorable-point.case .label {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .honorable-point.missed .label {
+    background: #fdeeee;
+    color: #b3413a;
+  }
+
+  .honorable-point p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--c1, var(--accent)), var(--c2, var(--accent-2)));
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(90, 60, 180, 0.12);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 4px;
+    padding-left: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .card-meta {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #fff;
+    background: var(--accent-2);
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .card-location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+    padding-left: 8px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    font-size: 0.98rem;
+    padding-left: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .school-colors {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.12);
+    display: inline-block;
+  }
+
+  /* Ivy comparison table */
+  .ivy-table-wrap {
+    margin-top: 24px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+  }
+
+  table.ivy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+  }
+
+  table.ivy-table th {
+    text-align: left;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    padding: 14px 18px;
+  }
+
+  table.ivy-table td {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  table.ivy-table tr:nth-child(even) td {
+    background: #fbf9ff;
+  }
+
+  table.ivy-table td.pub-ivy {
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  table.ivy-table td.real-ivy {
+    font-weight: 700;
+    color: var(--accent-2);
+  }
+
+  table.ivy-table td.trait {
+    color: var(--muted);
+  }
+
+  /* Callout / pillars */
+  .callout {
+    background: linear-gradient(135deg, var(--accent-light), #eafffb);
+    border: 1px solid #d9d0ff;
+    border-radius: 18px;
+    padding: 32px;
+    margin-top: 24px;
+  }
+
+  .callout h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--ink);
+  }
+
+  .pillars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pillars li {
+    padding-left: 24px;
+    position: relative;
+    font-size: 1rem;
+    color: #2b2b40;
+  }
+
+  .pillars li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+
+  .pillars strong {
+    display: block;
+    font-size: 1.03rem;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+
+  /* By The Numbers */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+    border-left: 4px solid var(--c1, var(--accent));
+  }
+
+  .stat-card h4 {
+    margin: 0 0 12px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px dashed var(--border);
+  }
+
+  .stat-row:first-of-type {
+    border-top: none;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--c1, var(--accent));
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .stats-source-note {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-left: 4px solid var(--accent-2);
+    background: #eafffb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #0f5f5e;
+  }
+
+  @media (min-width: 620px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  @media (min-width: 620px) {
+    .pillars { grid-template-columns: 1fr 1fr; }
+    .method-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    table.ivy-table { font-size: 0.85rem; }
+    table.ivy-table th, table.ivy-table td { padding: 10px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="hero">
+    <div class="eyebrow">🎓 Higher Education &middot; Analysis</div>
+    <h1>The Modern Public Ivies</h1>
+    <p class="subtitle">Redefining Academic Excellence and Public Higher Education</p>
+    <div class="hero-stats">
+      <div class="hero-stat">8<span>Schools</span></div>
+      <div class="hero-stat">1985<span>Original Concept</span></div>
+      <div class="hero-stat">Fresh<span>List, Built From Scratch</span></div>
+      <div class="hero-stat">4<span>Selection Criteria</span></div>
+    </div>
+  </header>
+
+  <section id="introduction">
+    <span class="section-tag">Where This Comes From</span>
+    <h2>Introduction</h2>
+    <p class="lede">In 1985, former Vassar and Bucknell admissions dean Richard Moll coined a term that would reshape how prospective students and their families thought about public higher education: the <strong class="hl">"Public Ivies."</strong> In his book of the same name, Moll identified a set of state universities that, in his estimation, delivered an academic experience rivaling the private Ivy League institutions of the American Northeast — but at a fraction of the cost, and open to a far broader swath of the public.</p>
+    <p>Moll's central argument was simple but, at the time, somewhat provocative: prestige was not the exclusive property of small, private, tuition-driven colleges. A handful of large state flagship universities had, through decades of sustained public investment, assembled faculties, research infrastructure, and student bodies that could compete with — and in some disciplines exceed — their private peers. These institutions accomplished this while still fulfilling a fundamentally different mission than the Ivies: educating tens of thousands of students annually, many of them first-generation college attendees, at a public price point.</p>
+    <p>Four decades later, the landscape of American higher education has shifted considerably. Endowments have grown, research budgets have ballooned into the billions, admissions have become dramatically more selective, and the competition for top faculty and graduate talent has intensified. Yet the core tension Moll identified — the balancing act between elite academic output and public accessibility — remains as relevant as ever.</p>
+    <p>But the "Public Ivy" label itself has drifted a long way from its original meaning. Moll's list was tight and deliberately selective. In the decades since, the term has been recycled, expanded, and diluted by successive guidebooks and rankings sites, to the point that the most commonly cited modern version of the list now includes somewhere in the neighborhood of thirty schools. That is not a badge of exclusivity — it is closer to a description of "most flagship state universities," which defeats the purpose of the comparison in the first place.</p>
+    <p>The actual Ivy League, by contrast, has exactly eight members. Its prestige is inseparable from its exclusivity: the label means something precisely because so few schools carry it. If the "Public Ivy" comparison is going to mean anything similar, it needs to observe the same discipline. Rather than trimming down the existing, thirty-school version of the list, this piece takes a different approach: building an entirely new, independent list from scratch, selecting only the state flagships whose combination of research output, faculty caliber, selectivity, and alumni influence puts them in a class by themselves. What follows is a "Modern Public Ivies" in the strictest sense: not a pared-down version of someone else's list, but a short list of the best of the best, assembled fresh.</p>
+  </section>
+
+  <section id="methodology">
+    <span class="section-tag">How We Built A List Of 8</span>
+    <h2>Our Methodology</h2>
+    <p>Building a list of eight from scratch requires actual criteria, not vibes. We evaluated candidate state flagships against four measurable pillars, then kept only the schools that cleared the bar on all four at once. A school could be a research powerhouse but lack elite selectivity, or have great name recognition but a thinner research budget — those schools didn't make the cut. Only the ones that stack up across the board made the final eight.</p>
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">1</div>
+        <div>
+          <h4>Research Scale</h4>
+          <p>Annual research expenditure in the billion-dollar range, reflecting real federal, state, and private research infrastructure — not just prestige by association.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">2</div>
+        <div>
+          <h4>Faculty Caliber</h4>
+          <p>Presence of Nobel laureates, National Academy members, and other top-tier faculty honors, concentrated enough to shape a department's global reputation.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">3</div>
+        <div>
+          <h4>Selectivity &amp; Outcomes</h4>
+          <p>Admissions selectivity and graduate outcomes — employment, graduate school placement, and earnings — that hold up against elite private institutions.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">4</div>
+        <div>
+          <h4>Alumni Influence</h4>
+          <p>A large, engaged alumni network with measurable reach across industries, government, and philanthropy — scale that most private schools can't match.</p>
+        </div>
+      </div>
+    </div>
+    <div class="method-note">
+      ⚠️ <strong>A note on rigor:</strong> this is a qualitative, editorially-driven exercise, not a statistical ranking model. We're not claiming these four criteria produce a single "correct" list — we're using them as a discipline to force genuine exclusivity, the same way the real Ivy League's membership is fixed rather than fluid.
+    </div>
+  </section>
+
+  <section id="map">
+    <span class="section-tag">Where They Are</span>
+    <h2>The Public Ivies, Mapped</h2>
+    <p>Unlike the real Ivy League, which is clustered almost entirely in the Northeast corridor, this list spans the country — from the Pacific Northwest to the Texas hill country to the Virginia tidewater. California and Virginia each claim two members, and the one conspicuous gap is the Northeast itself — the region the actual Ivy League already owns, as the dashed outline shows.</p>
+    <div class="map-wrap">
+      <svg viewBox="0 0 960 600" role="img" aria-label="Map of the United States showing the locations of the eight Modern Public Ivies">
+        <title>Locations of the eight Modern Public Ivies</title>
+        <path d="M50,497L52,496L54,495L55,494L56,494L58,493L60,492L62,492L64,492L64,493L64,495L64,496L66,496L68,496L69,497L71,497L71,495L73,496L72,494L70,495L71,493L70,492L69,491L69,490L70,491L70,492L71,493L72,494L71,492L71,491L72,490L70,489L69,489L68,489L66,488L66,487L65,484L64,483L63,481L62,480L60,479L60,478L59,477L60,476L61,474L62,474L65,474L66,474L68,473L69,471L70,469L71,467L72,466L72,465L74,464L76,464L77,464L79,463L80,461L82,460L83,461L85,461L86,460L87,459L88,458L90,458L91,459L90,460L91,461L92,460L92,459L94,460L94,461L95,461L97,461L98,461L99,461L99,462L100,463L101,464L102,464L104,464L105,464L107,463L108,463L109,464L110,465L112,465L113,465L114,465L116,465L118,466L119,466L121,466L122,465L123,464L125,465L126,465L128,466L129,466L131,467L143,526L144,533L145,538L147,539L149,539L150,537L152,536L152,539L154,539L155,541L160,544L161,545L163,544L164,542L164,541L165,540L165,539L167,537L168,538L169,538L170,540L171,540L172,541L173,542L176,543L177,545L179,546L180,548L181,549L182,550L184,551L185,552L185,553L187,554L187,555L188,555L189,557L190,556L192,557L194,557L195,557L197,558L198,558L198,560L198,562L200,563L200,565L199,567L199,568L198,569L197,568L196,567L196,565L196,564L195,562L194,561L195,562L195,564L196,565L195,566L195,565L194,566L193,566L192,565L192,564L192,562L191,562L191,563L191,565L190,565L189,563L189,562L189,560L189,562L188,563L187,561L186,561L187,560L187,558L186,557L185,556L184,556L183,554L182,555L180,555L181,553L180,552L179,551L181,551L179,550L177,549L176,549L176,547L176,546L175,547L174,548L173,547L172,546L171,544L170,543L169,542L168,541L169,542L168,542L169,543L170,545L171,546L171,547L172,548L170,548L169,548L168,548L168,547L167,545L166,544L167,546L165,546L164,545L165,546L166,547L167,547L168,549L167,549L166,550L164,549L163,549L162,549L161,548L160,547L158,546L156,545L155,545L153,544L151,544L152,542L151,541L151,539L150,541L149,542L147,543L146,543L144,542L144,540L143,541L142,541L141,541L140,541L138,541L136,542L134,543L133,543L133,544L133,543L132,542L130,542L130,540L129,541L128,540L126,540L127,539L125,540L125,541L124,542L123,541L124,540L125,540L127,539L125,539L125,538L124,539L123,538L124,538L123,537L123,536L124,535L123,535L122,537L121,536L121,537L120,537L120,536L120,538L118,538L118,537L119,535L118,536L117,537L117,538L118,539L117,541L118,541L118,542L119,544L119,545L118,545L117,544L117,545L116,545L114,545L113,546L113,544L113,546L113,547L112,546L112,548L111,547L110,549L110,550L110,549L109,549L108,550L107,551L106,552L105,552L104,552L104,550L105,550L106,549L107,547L106,548L105,548L104,547L104,545L105,544L105,543L106,541L105,540L107,539L108,538L109,537L110,538L111,538L113,538L114,538L113,538L111,537L110,536L111,535L112,534L111,534L110,536L108,536L106,536L106,537L105,538L104,539L104,540L103,540L102,542L101,543L101,544L101,546L100,547L99,547L99,548L98,549L97,547L97,549L96,550L95,551L95,551L94,553L96,553L97,554L98,554L97,556L96,557L95,558L95,559L94,560L93,561L92,561L91,562L90,563L88,564L88,565L87,565L86,566L85,566L85,568L84,569L83,570L82,570L81,570L80,571L78,572L79,573L77,573L76,573L77,574L76,576L75,576L74,577L72,577L71,578L70,579L70,578L69,577L68,578L67,579L65,579L64,580L63,580L62,579L60,581L60,581L59,582L57,582L57,580L57,582L56,583L55,582L54,583L54,585L53,584L52,585L50,584L49,585L48,586L46,586L46,584L47,584L48,582L50,582L51,581L53,581L53,583L54,581L55,581L56,580L58,579L59,577L60,577L61,576L63,576L64,575L65,575L65,577L66,578L66,576L67,577L67,575L68,574L69,573L70,572L71,571L73,570L74,570L75,570L76,568L77,567L78,566L79,565L80,565L80,564L80,560L81,559L81,558L81,557L82,556L83,555L83,554L82,555L80,555L78,556L78,555L77,554L77,553L76,554L76,555L76,557L75,557L74,556L74,555L73,554L71,554L71,553L70,552L69,552L68,553L66,554L65,555L63,554L62,554L64,554L64,552L64,551L63,549L64,549L65,547L64,546L64,545L63,543L63,542L62,544L61,544L60,544L57,545L56,544L56,542L55,541L54,540L53,539L52,538L53,537L54,535L54,534L53,533L52,533L52,532L51,531L50,529L52,529L51,528L52,528L52,526L55,524L56,523L56,522L57,519L58,518L60,517L61,518L62,520L64,519L66,517L66,516L67,517L69,517L70,517L71,516L72,514L72,513L72,512L71,510L70,509L72,509L73,508L72,507L71,506L70,507L68,507L67,508L66,510L66,508L65,507L65,509L64,508L62,507L61,507L59,508L57,507L56,507L54,506L54,505L54,503L53,502L54,501L55,500L53,499L52,499L51,498L50,497M850,344L850,343L854,340L855,339L857,338L858,336L857,331L856,329L855,327L857,329L857,330L858,333L858,339L856,339L854,341L851,343L850,344M301,575L302,573L304,571L305,570L304,567L304,564L306,564L307,564L309,566L310,567L313,567L317,569L319,570L321,573L321,575L323,575L323,576L325,579L327,580L327,581L325,583L324,584L322,585L320,586L319,586L318,586L316,587L314,588L313,588L311,590L311,591L309,594L308,592L306,591L304,591L304,589L304,587L304,584L304,582L303,581L303,579L302,577L301,575M287,549L288,548L288,547L290,547L291,549L292,550L294,549L295,548L297,549L299,550L302,552L302,553L301,555L299,556L296,556L294,557L293,556L292,552L291,552L289,551L288,550L287,549M274,545L276,544L277,543L281,543L284,544L286,543L287,544L285,546L283,546L279,545L278,545L276,545L274,545M254,534L257,534L259,533L260,532L262,533L263,535L263,537L265,538L266,537L265,538L267,541L266,541L264,542L262,540L260,540L258,541L257,539L256,538L255,536L254,534M888,190L886,190L885,191L884,192L882,192L880,194L877,195L875,195L874,195L872,196L870,197L868,199L866,200L865,201L863,203L862,204L861,205L859,207L860,208L861,208L863,206L864,205L865,205L867,205L868,205L869,204L870,203L875,202L877,201L879,199L880,197L881,196L882,196L881,197L883,198L885,197L886,198L888,197L889,196L886,199L882,202L879,204L875,207L872,209L870,211L868,211L864,213L861,214L858,216L857,215L856,214L856,213L856,215L854,218L855,219L857,219L858,218L859,220L859,222L859,225L859,230L860,233L858,238L858,240L858,242L857,243L855,245L854,247L853,250L852,253L851,254L850,255L849,253L850,251L850,250L848,249L847,249L845,250L844,249L843,248L841,247L839,247L839,246L837,245L837,243L836,242L837,240L835,242L836,243L836,245L838,246L840,248L841,249L841,251L842,254L843,254L844,256L846,259L848,258L849,261L850,266L850,269L850,273L849,276L849,278L848,280L846,280L846,282L845,284L845,286L845,287L844,290L844,292L844,294L844,295L843,297L842,298L841,299L841,298L840,297L840,296L839,294L840,293L840,291L840,289L840,288L840,286L841,284L842,283L842,281L841,281L842,279L840,279L839,281L838,280L839,278L838,277L837,277L837,275L838,274L837,273L837,271L836,273L836,274L835,272L835,271L834,273L834,275L833,275L831,273L831,272L829,270L830,269L829,268L830,266L831,267L832,267L831,266L830,265L829,264L828,265L827,263L828,262L829,262L829,260L827,260L826,262L826,260L827,258L829,259L828,257L829,256L828,257L827,255L827,252L827,251L828,249L830,249L830,247L830,245L828,246L828,247L826,250L826,249L825,250L826,252L825,250L825,252L824,254L823,255L821,253L822,254L824,256L824,257L825,258L824,260L824,261L824,262L823,264L824,265L825,268L825,269L826,270L828,272L828,273L827,274L829,274L829,276L830,277L831,280L829,278L828,277L828,279L827,278L825,277L824,277L822,277L821,275L821,276L819,276L818,275L817,273L816,274L814,276L813,273L813,271L814,270L815,269L813,270L812,273L812,275L813,276L815,276L816,275L818,275L817,276L819,277L821,279L823,278L825,278L827,280L828,281L830,282L831,282L833,283L833,284L832,287L832,288L830,288L829,288L828,287L826,286L825,286L823,284L822,283L823,284L825,286L826,287L828,289L829,290L831,289L833,290L833,292L834,292L835,294L835,296L834,295L832,294L833,296L834,297L833,297L834,299L835,299L836,301L836,302L835,303L834,304L833,302L831,302L830,301L829,299L828,299L826,299L825,299L824,300L825,300L826,300L828,301L828,299L829,302L830,303L831,303L833,304L833,305L835,305L836,305L836,303L838,304L840,304L841,303L843,305L844,308L845,309L846,311L848,316L850,319L852,322L855,326L853,324L852,322L849,319L848,316L847,315L847,314L845,312L844,313L845,314L846,315L847,317L848,318L849,320L848,320L846,318L845,318L846,319L847,319L845,319L842,318L843,319L844,320L842,321L841,320L841,321L840,322L838,321L837,321L839,322L840,322L838,323L838,325L836,325L834,325L833,323L832,322L833,320L832,321L832,323L833,325L834,326L834,327L837,327L839,325L841,326L843,324L845,324L846,324L846,327L847,331L847,328L847,326L848,325L849,324L851,325L852,326L852,329L852,331L852,332L850,332L850,333L849,334L848,336L848,338L847,338L845,339L843,339L841,339L839,338L838,336L840,336L838,336L837,337L838,338L839,339L836,339L834,339L832,339L830,338L831,339L833,339L837,340L840,340L841,341L841,343L840,344L840,345L839,346L837,349L833,348L833,349L835,350L837,350L839,348L842,347L843,346L843,347L845,347L844,346L845,346L846,348L845,350L844,350L843,351L843,353L843,354L842,354L841,353L841,354L843,355L844,352L846,350L847,348L849,344L848,346L847,348L846,350L845,352L844,353L843,356L840,355L838,355L834,357L832,358L831,359L829,361L827,363L826,364L824,367L823,368L822,371L821,373L821,375L821,377L821,378L819,377L818,377L816,377L815,378L813,378L810,380L807,382L806,383L804,386L803,389L802,390L801,392L801,395L801,397L800,398L799,399L799,401L796,402L795,402L794,403L795,404L793,406L791,408L789,408L790,409L790,410L789,411L788,412L786,413L785,414L783,416L781,417L780,417L781,418L781,420L779,421L778,422L776,421L776,422L777,423L777,424L775,426L774,427L775,428L775,429L773,430L773,432L771,432L772,433L772,434L771,435L769,436L771,436L771,437L771,439L769,440L770,440L769,443L769,444L769,447L768,449L768,450L768,452L766,453L768,453L768,454L768,457L768,459L769,461L769,463L770,465L771,467L773,475L775,477L778,483L781,488L783,492L789,500L792,503L793,504L794,505L793,507L793,509L794,512L794,514L796,516L799,521L801,524L801,525L803,528L805,532L806,534L807,536L809,540L810,545L810,548L811,552L811,558L811,561L811,563L811,565L809,564L809,566L809,568L808,570L809,572L809,573L808,574L810,573L811,570L811,571L809,576L809,577L807,579L805,582L804,584L806,581L807,580L807,577L805,576L803,578L802,578L800,578L798,579L795,580L793,580L792,578L792,577L793,576L792,573L791,572L790,571L788,569L787,569L786,567L784,567L783,566L781,565L780,566L778,564L777,561L776,558L775,556L772,553L771,552L769,554L769,552L768,550L767,550L768,549L769,547L769,545L768,544L767,544L768,547L766,548L765,547L763,545L761,542L760,540L758,538L756,535L755,534L754,533L753,532L754,533L755,532L756,531L757,528L758,527L759,525L759,523L757,523L758,525L756,525L756,523L753,521L753,523L753,524L755,524L756,526L755,528L754,529L754,530L753,528L752,527L750,525L750,522L750,521L749,518L750,519L750,521L750,518L751,517L751,515L751,513L752,511L752,509L751,508L750,506L750,503L750,502L748,500L748,499L747,497L743,497L743,498L742,496L740,495L739,494L738,492L736,491L735,490L734,488L734,487L732,486L730,485L729,484L728,482L726,481L723,480L721,479L719,480L716,480L715,482L716,484L714,484L712,484L710,486L705,489L705,488L703,490L701,490L702,491L703,492L705,491L707,490L709,488L708,490L706,491L703,492L702,492L701,492L699,491L698,491L697,492L696,490L695,488L696,489L696,491L697,488L696,487L694,486L693,485L692,485L691,484L689,483L687,482L684,480L681,479L677,478L675,478L670,478L668,478L665,479L660,481L658,481L654,482L651,483L648,484L644,484L646,483L649,483L648,482L646,480L645,478L646,477L645,475L643,474L642,475L642,477L642,478L642,481L642,482L641,482L639,481L638,481L637,482L635,483L634,482L633,482L631,482L630,483L629,482L627,482L625,482L623,483L621,484L619,484L619,483L619,485L617,486L617,487L615,488L614,488L612,489L611,490L610,491L609,493L611,493L612,495L614,495L615,492L616,491L617,490L617,492L619,493L620,491L621,492L620,493L620,494L621,494L619,495L620,496L618,496L618,497L618,499L617,498L616,499L617,500L615,499L613,500L615,500L613,500L614,501L613,502L615,503L616,504L618,505L619,505L620,506L622,507L625,508L625,509L626,508L625,510L626,511L624,513L623,513L622,512L620,514L619,515L620,514L620,512L621,511L621,509L620,510L619,511L617,509L615,508L610,507L606,510L603,513L602,512L601,509L600,510L600,508L599,507L598,509L597,509L596,510L595,511L594,512L592,513L592,514L591,514L590,513L589,512L586,512L584,511L582,510L581,509L583,508L584,509L586,510L585,508L583,507L583,506L581,507L581,506L581,505L579,506L578,504L577,502L575,502L575,500L573,500L571,501L570,500L571,499L570,498L568,498L567,499L565,500L564,500L565,501L566,501L566,503L567,502L565,504L563,505L562,505L556,504L554,503L550,501L548,501L545,500L543,500L539,500L535,501L534,501L532,502L529,503L527,503L518,508L516,509L515,510L516,508L518,507L520,506L519,505L515,506L515,504L516,502L516,501L515,501L513,501L512,503L511,502L510,503L510,505L510,507L512,507L512,508L512,510L512,511L509,513L508,514L507,516L508,515L510,514L512,512L513,511L515,511L514,512L509,515L508,516L505,518L502,521L497,524L494,526L490,527L486,529L484,531L483,532L482,533L478,535L476,537L473,540L471,542L470,544L469,545L466,549L465,553L464,555L463,559L463,561L463,563L463,567L464,571L465,574L466,578L467,583L466,579L465,573L463,572L464,572L464,570L462,567L462,565L462,560L463,555L464,551L466,548L467,547L468,545L468,544L469,542L470,542L472,538L474,537L476,536L478,534L480,533L482,533L482,531L479,533L477,533L477,531L475,531L475,533L475,535L473,536L472,538L470,537L468,537L466,539L468,539L470,538L470,539L467,544L466,543L464,543L462,543L460,544L462,544L463,546L465,547L464,550L463,553L462,555L461,556L460,556L461,554L458,556L460,557L462,557L462,559L461,563L461,567L461,571L462,572L462,574L464,578L464,580L464,581L465,583L466,583L467,586L465,586L463,586L463,588L461,588L460,587L459,586L457,584L455,584L453,583L451,583L449,583L447,583L444,582L443,581L441,579L438,579L437,579L435,577L433,576L432,576L431,575L429,575L428,574L427,572L426,570L426,568L425,566L425,565L424,564L423,563L422,561L421,560L422,558L422,556L421,555L421,554L421,552L421,551L421,549L420,548L419,547L417,547L416,545L415,544L413,543L413,542L412,540L411,539L411,537L410,536L407,534L407,533L406,532L405,530L404,528L404,526L403,525L402,524L402,522L401,520L400,518L399,517L400,516L399,514L398,513L397,510L395,509L394,508L393,507L392,506L390,505L388,504L388,501L388,503L387,501L386,500L386,498L384,498L383,497L380,498L379,497L377,497L376,497L374,496L371,496L371,495L369,495L367,497L364,496L362,497L361,498L360,499L359,501L358,502L358,503L357,505L356,507L356,509L355,509L354,510L352,511L351,513L349,513L347,512L345,512L344,509L342,509L340,508L339,506L335,505L334,504L333,503L331,501L330,500L329,499L327,498L325,497L325,493L324,492L324,491L323,490L322,488L323,486L323,484L323,483L322,481L321,480L320,479L320,475L319,474L318,472L316,471L314,469L313,469L311,468L308,464L308,462L306,461L305,460L303,457L302,456L301,455L299,454L297,453L297,451L296,449L295,447L293,445L292,445L260,441L259,451L243,449L239,448L217,445L205,443L182,430L169,423L163,419L140,405L141,404L141,402L143,401L115,397L98,395L98,393L98,392L96,392L97,390L97,389L97,387L98,384L97,381L95,376L94,375L93,373L91,370L90,369L88,367L87,365L85,364L83,365L82,364L81,363L82,362L81,359L81,357L80,356L78,356L76,356L75,356L73,354L71,353L69,351L68,348L67,346L66,345L64,344L62,343L60,342L58,342L56,341L55,340L51,339L48,339L48,337L46,336L47,333L47,331L48,329L47,328L48,326L49,323L48,322L46,320L45,319L47,317L46,315L45,314L43,312L43,310L41,309L41,307L41,306L40,304L39,301L38,299L38,297L37,295L35,293L34,290L35,288L35,286L36,284L36,285L38,284L39,281L39,278L38,277L35,276L33,275L32,272L32,271L31,270L31,269L32,266L32,264L31,263L31,261L32,259L33,257L35,256L35,259L34,261L36,262L37,264L38,266L38,264L38,263L38,260L37,259L36,257L37,256L37,255L35,253L37,252L38,253L38,251L37,249L35,250L35,251L35,252L34,253L35,255L34,256L32,255L31,253L29,252L28,249L26,249L27,247L28,244L28,243L27,241L27,239L26,238L24,236L23,232L22,230L21,228L20,225L21,224L21,221L21,218L21,216L22,214L23,212L24,210L23,208L24,206L23,204L22,201L21,199L20,198L18,194L19,193L19,191L19,190L20,188L21,186L25,182L26,181L27,179L27,176L29,174L31,170L31,168L31,165L31,163L30,162L31,160L32,159L32,157L31,156L31,155L31,153L31,151L31,149L32,147L33,144L33,142L33,140L32,137L34,136L35,135L36,133L37,131L38,129L39,128L41,125L43,121L46,116L47,112L49,109L50,105L51,104L52,101L52,99L53,97L55,93L56,91L57,88L58,87L58,85L59,83L60,80L61,79L61,76L61,75L62,73L63,71L63,67L64,69L66,69L68,69L70,69L68,68L67,68L65,68L64,66L63,66L63,64L64,62L65,59L65,60L64,62L64,64L65,64L65,62L67,61L66,59L69,58L68,57L67,57L65,56L65,53L67,53L70,53L68,51L66,50L66,52L66,47L66,44L66,42L66,38L66,37L67,34L66,32L66,30L65,29L65,27L65,25L65,23L66,22L67,20L66,19L69,20L71,22L72,23L74,25L76,26L79,28L81,29L83,29L86,31L88,30L89,31L90,32L91,34L91,35L91,33L92,32L93,33L93,34L94,33L94,35L93,38L92,39L90,41L91,39L89,41L87,42L84,45L83,47L84,48L86,48L84,47L87,43L89,42L90,42L91,41L92,40L94,39L94,37L95,38L95,42L94,41L94,43L94,44L93,46L93,47L92,49L91,50L90,53L89,51L90,49L88,51L89,53L88,54L87,53L87,51L88,49L86,50L86,52L87,54L88,55L89,54L91,52L91,51L92,52L93,51L95,51L95,49L95,47L95,46L96,45L95,44L96,43L97,41L98,40L99,38L100,38L100,37L99,34L99,33L98,32L98,34L98,35L97,34L97,32L97,31L99,31L99,30L98,28L98,27L96,27L97,25L98,25L98,26L100,24L101,24L100,22L101,20L99,19L99,21L98,20L98,18L97,16L97,15L99,14L108,17L113,18L120,20L128,22L146,27L164,31L181,35L195,38L207,41L219,43L229,45L239,47L258,50L269,52L281,54L321,59L333,61L341,62L362,64L371,64L381,65L414,67L425,68L440,69L461,69L472,69L477,69L491,69L503,69L503,61L504,62L506,61L507,62L509,67L510,72L510,73L511,75L512,76L514,76L516,76L517,77L520,77L523,77L523,79L526,80L527,79L528,79L530,77L532,77L535,77L539,79L541,79L540,80L540,81L543,81L543,82L544,83L545,86L546,85L546,84L547,83L550,82L550,84L552,85L555,86L555,87L556,88L557,88L557,89L558,88L560,88L562,88L564,86L566,85L567,84L568,86L569,87L572,87L574,87L575,87L579,86L580,87L581,88L583,89L585,88L586,88L588,88L587,89L585,90L584,91L582,92L579,93L576,95L573,96L570,98L568,99L565,103L564,104L561,108L559,109L558,110L557,112L555,114L551,117L551,118L552,119L553,120L555,119L557,118L559,118L562,116L563,115L565,115L566,114L567,113L569,113L571,114L570,116L569,117L570,118L568,121L571,119L574,120L575,120L576,121L577,120L580,119L582,118L584,117L585,115L587,114L590,114L591,114L594,112L595,110L597,110L598,110L599,108L600,106L602,104L604,104L605,103L605,102L606,101L609,99L612,98L615,98L616,99L615,100L613,100L611,102L610,104L609,106L607,107L607,109L606,110L606,113L606,115L607,113L609,111L611,110L610,111L609,113L610,111L612,111L614,110L616,111L617,112L619,113L621,115L622,117L623,118L625,119L627,119L629,118L630,119L632,119L633,119L633,117L635,117L635,119L637,117L639,116L642,113L646,112L648,112L650,112L652,112L655,110L656,110L658,110L660,109L659,111L659,113L659,115L660,116L662,116L665,115L666,116L667,116L668,114L671,114L671,113L673,113L673,115L674,118L674,119L672,120L672,121L674,121L676,121L677,124L678,124L680,124L679,122L682,121L684,123L684,125L682,125L680,125L678,125L676,125L675,125L671,126L669,125L668,125L666,124L666,126L665,128L666,129L664,129L662,128L661,126L659,125L656,125L654,125L653,125L652,127L651,128L648,128L647,128L646,129L644,129L643,129L641,130L641,132L640,133L639,134L638,134L637,135L637,136L635,136L636,135L636,134L638,132L637,131L636,133L634,132L633,134L632,136L631,135L631,134L630,136L628,137L627,140L626,143L625,144L624,146L622,150L622,152L622,153L620,154L619,154L619,156L618,158L617,161L617,163L618,164L619,162L620,161L621,160L623,156L624,155L626,155L627,152L628,150L628,148L630,148L631,145L632,145L632,147L631,150L630,151L629,153L629,154L628,155L628,157L627,158L627,161L626,162L625,168L626,169L626,171L624,173L624,174L623,178L623,179L624,182L623,185L622,187L621,189L621,192L622,194L622,196L623,198L623,200L623,201L624,202L624,204L624,206L624,209L625,211L624,213L625,215L626,217L627,219L628,222L629,223L630,225L631,226L632,226L634,228L636,227L637,227L640,225L642,224L644,222L645,220L647,215L648,212L649,210L650,208L650,204L650,201L650,198L649,195L648,192L645,188L645,187L644,184L642,182L643,179L644,176L643,174L642,172L643,170L644,167L645,165L645,163L645,160L645,158L646,156L647,156L647,154L647,153L648,152L649,151L650,151L651,150L652,149L653,146L654,145L654,147L655,148L653,150L654,151L654,153L654,155L656,152L655,150L656,152L655,153L655,155L656,154L658,151L658,149L658,146L657,145L657,143L658,142L659,141L662,140L663,140L662,139L661,138L660,136L661,134L663,132L661,132L665,131L669,132L670,133L672,133L674,133L676,134L677,136L679,135L681,137L682,137L684,138L686,138L687,139L689,142L691,144L689,144L688,145L688,147L690,148L691,151L691,153L691,154L691,155L691,157L692,160L690,161L689,162L688,164L689,167L687,167L685,169L684,171L684,173L684,176L686,176L687,177L689,177L690,174L691,174L691,172L691,170L693,170L692,169L693,169L694,168L695,167L697,167L699,165L701,166L703,168L705,171L706,175L707,178L708,183L709,185L710,187L710,189L710,192L710,195L710,196L709,198L708,199L707,198L708,195L706,195L705,196L706,198L704,199L705,201L705,202L704,203L702,204L701,206L702,209L701,210L701,211L700,212L699,213L699,215L697,216L698,218L699,219L702,220L704,220L705,221L707,222L708,220L709,221L710,221L712,223L714,224L717,222L718,222L719,221L722,220L724,220L726,219L728,218L729,216L731,215L733,212L737,210L739,209L740,208L744,206L747,204L750,202L750,200L753,199L756,197L757,196L760,193L762,191L763,190L765,189L765,187L766,186L767,184L768,183L768,181L767,180L765,179L765,177L764,176L763,173L765,172L767,171L770,170L772,169L774,168L776,168L778,168L783,168L784,168L785,168L787,169L790,168L792,167L794,166L795,167L797,166L799,165L800,164L801,162L803,161L804,159L806,159L807,157L807,156L806,152L804,152L806,150L807,150L805,148L804,149L803,148L802,146L802,144L805,143L805,141L807,140L808,139L809,137L810,135L811,132L813,130L815,127L818,124L820,122L822,121L823,121L829,120L832,119L838,117L839,117L844,116L848,115L855,113L857,113L860,112L873,109L872,107L873,106L873,104L873,103L874,101L875,102L877,102L877,101L878,99L880,100L880,101L881,100L881,98L881,97L882,97L884,97L882,95L882,92L883,91L884,90L885,88L884,87L885,86L886,85L886,83L885,82L885,80L884,78L884,76L885,74L886,73L885,66L892,47L894,47L896,50L898,51L900,50L901,49L902,49L904,47L905,47L906,45L907,45L909,45L911,46L914,48L915,49L919,59L923,71L923,73L923,74L924,75L924,78L926,78L928,79L929,79L931,79L930,81L931,82L932,83L932,85L934,87L935,88L935,86L937,86L938,87L939,88L941,90L942,93L942,94L940,98L939,98L938,97L937,98L938,99L937,100L936,101L935,101L937,102L936,104L935,103L933,103L932,104L932,106L930,107L929,108L928,107L927,108L927,111L926,112L925,112L923,110L924,108L923,109L921,110L922,111L923,112L922,115L923,116L923,118L922,117L920,115L920,114L920,113L919,112L918,112L917,110L917,108L916,110L914,111L915,112L915,113L915,115L915,116L915,118L916,118L916,120L914,121L914,123L913,124L913,123L912,123L912,122L911,124L910,125L909,126L908,126L908,127L907,127L907,129L906,130L905,128L903,130L902,131L901,132L901,134L901,135L899,136L899,138L899,139L898,140L897,141L897,143L897,145L897,147L895,151L896,153L897,156L899,156L900,156L900,158L899,158L897,159L898,160L897,161L896,163L897,164L896,166L897,165L899,165L900,166L901,167L903,168L903,170L904,171L905,171L906,173L907,175L909,175L911,175L912,174L915,172L914,170L914,169L913,168L911,167L910,168L909,167L911,167L913,167L915,169L916,171L917,174L917,176L916,175L914,175L912,177L910,177L909,178L909,179L907,180L905,182L904,183L903,184L902,184L904,183L905,182L906,180L905,177L904,176L904,178L901,180L902,182L900,183L899,183L898,184L897,183L897,181L897,184L896,185L896,182L896,181L897,180L895,181L895,180L893,179L894,181L892,181L894,182L894,184L894,185L894,188L892,188L890,189L888,191" fill="#efeafd" stroke="none"/>
+        <path d="M637,482L636,477L635,471L634,463L632,448L633,442L633,429L633,424L633,403L633,400L634,387L634,380L633,379L632,378L641,377L646,376L656,376L664,375L675,374L679,374L680,380L683,388L685,395L686,401L688,407L692,420L692,421L693,422L694,425L695,426L696,427L696,429L697,432L698,432L698,434L697,435L696,436L696,439L696,441L695,442L696,445L697,448L698,450L697,451L697,453L697,455L698,456L699,459L700,460L695,462L690,462L683,463L671,465L662,465L651,466L650,469L652,471L655,473L655,475L654,477L656,479L655,479L655,481L654,482M143,401L145,401L147,400L148,399L148,397L148,394L146,394L145,392L145,391L146,389L145,388L146,386L147,385L149,383L150,382L151,380L151,378L151,377L152,376L152,375L154,373L154,371L156,371L158,370L160,369L160,366L157,364L157,362L156,357L155,356L155,355L154,353L154,350L155,349L156,348L156,346L157,343L156,341L156,339L157,337L157,335L157,334L157,332L158,331L157,328L157,326L159,326L161,325L162,326L163,326L165,328L166,329L167,330L170,326L171,322L172,317L173,308L200,313L219,316L235,319L261,323L256,355L255,360L253,378L251,390L243,449M700,461L700,463L701,464L702,465L702,467L703,467L713,467L731,466L754,464L754,465L755,467L756,468L758,468L758,466L758,463L757,462L757,459L758,459L758,457L760,458L761,458L763,459L765,459L766,459L768,459M679,374L681,373L690,372L702,371L714,369L724,368L724,369L722,371L720,373L720,374L720,375L723,377L724,377L725,378L727,379L729,379L730,380L730,381L732,383L733,383L733,386L735,387L736,388L737,390L739,391L741,392L743,393L744,395L745,396L747,397L749,399L750,399L750,401L752,403L753,404L754,406L756,406L758,407L759,408L759,409L760,410L761,411L762,413L762,414L762,415L763,417L765,417L767,419L768,422L769,423L769,425L770,427L771,427L773,428M642,224L659,222L675,220L675,222L676,226L679,253L680,261L681,270L681,275L682,280L681,281L682,282L682,284L683,284L682,286L682,287L680,287L678,289L676,290L674,289L672,290L673,292L673,293L672,294L670,296L669,299L668,300L667,300L666,301L666,303L666,305L666,306L664,307L661,307L660,306L659,304L658,303L658,304L657,305L656,306L655,309L654,310L654,311L653,310L652,310L651,308L649,310L647,310L646,313L645,313L645,312L642,311L641,311L639,310L638,311L637,310L636,311L637,313L636,313L635,312L633,313L632,312L631,312L632,314L631,315L630,315L628,312L630,312L630,311L629,309L630,308L631,307L630,306L630,303L632,304L632,302L634,300L635,298L635,297L635,295L636,294L637,293L636,290L636,288L635,287L635,286L634,285L634,283L635,282L634,280L635,279L635,272L634,265L633,259L633,254L631,231L631,226M388,267L426,269L452,270L485,271L502,271L503,272L504,273L505,273L507,274L509,273L509,274L509,276L508,278L507,279L506,280L507,282L508,283L508,284L510,285L509,287L511,288L512,289L513,289L515,290L514,299L514,301L515,315L515,331L515,333L515,338L499,338L487,338L462,338L449,338L426,337L416,337L407,336L384,335M896,148L894,147L894,145L891,143L890,140L889,138L887,132L887,130L882,114L877,101M896,179L894,178L893,175L892,173L885,175L873,177L872,178L870,178L869,179L866,179L859,181L857,180L857,172L858,165L871,162L882,160L889,158L891,157L891,155L892,153L894,152L896,152M552,119L550,118L550,119L549,120L547,120L548,133L547,135L546,135L545,136L544,136L543,137L542,138L541,140L539,141L539,144L540,145L542,145L543,148L542,149L541,151L541,153L542,155L541,156L541,158L541,160L542,161L541,163L542,164L544,166L545,167L548,167L549,169L553,170L555,171L555,173L556,175L557,176L559,176L561,179L563,179L564,180L566,183L567,184L566,186L567,188L567,189L543,191L536,191L513,192L483,192L483,169L483,167L483,161L483,152L483,150L481,149L479,148L478,147L477,145L479,143L480,142L481,141L482,137L481,135L481,131L481,129L479,126L479,123L478,122L478,120L478,118L479,115L478,111L478,109L478,107L477,104L477,100L477,98L476,97L475,94L474,93L474,90L473,88L473,86L473,84L473,80L473,78L474,76L473,75L473,72L472,70M837,240L837,238L839,236L841,235L842,234L842,233L843,232L845,230L846,228L847,227L846,226L845,225L843,224L842,223L841,223L840,220L838,220L837,218L837,215L839,213L837,211L837,210L839,208L839,206L840,203L841,201L848,203L857,206L856,210L856,211L856,212M702,371L702,365L703,364L705,364L706,363L706,362L706,361L707,359L708,358L710,357L715,356L717,354L719,352L720,352L722,350L723,350L725,348L725,346L727,344L729,343L729,345L732,344L733,342L734,341L735,340L737,340L738,340L741,336L742,334L743,334L743,333L744,332L744,330L744,329L749,328L753,328L759,327L761,326L768,326L782,323L800,320L804,319L821,316L827,315L829,314L846,311M810,380L803,375L795,369L793,367L786,362L782,363L777,364L766,366L766,363L762,360L761,361L760,360L757,359L738,361L736,362L735,362L733,363L731,364L730,365L724,368M482,137L470,137L453,137L439,136L418,136L381,133L365,132L370,78L371,64M515,338L515,350L515,352L516,356L516,358L517,365L518,367L519,374L519,381L519,386L519,390L518,393L518,402L518,414L516,413L514,413L513,411L511,412L510,410L509,409L508,409L506,407L505,407L504,408L503,409L500,409L499,409L498,408L496,409L495,408L493,410L492,409L490,410L488,410L487,411L485,411L484,413L483,411L481,411L481,410L479,409L480,408L478,408L477,410L476,410L475,409L474,407L472,407L472,409L471,410L470,410L470,412L469,412L468,410L469,408L467,408L466,409L465,410L464,410L464,408L462,408L461,407L460,406L459,407L457,409L454,408L454,407L454,406L452,406L451,404L452,402L451,403L449,403L447,402L446,404L445,404L443,402L442,402L440,402L437,401L436,400L433,400L432,397L431,396L429,395L428,396L426,396L425,396L423,396L421,394L419,392L417,392L419,348L390,347L366,345L366,343L367,334M756,197L757,203L771,200L776,200L785,198L800,195L806,194L812,192L822,190L828,189L829,190L830,192L833,192L833,193L835,196L836,198L838,199L840,199L841,200L842,201M838,237L836,237L835,237L833,238L832,241L812,245L803,247L789,249L770,253L753,256L749,235L745,205M483,192L481,192L481,193L482,194L482,196L481,198L483,198L483,200L483,202L482,203L482,205L482,207L481,208L480,210L482,212L483,213L483,215L482,214L480,214L479,212L479,211L477,210L476,209L474,209L472,208L471,207L469,206L467,206L466,206L464,206L462,206L460,206L459,208L458,208L456,207L454,206L450,204L432,202L424,202L399,201L395,200L385,200L360,198L360,191L363,156L363,153L365,136L365,132M518,414L520,415L521,416L522,415L523,416L525,415L527,416L527,428L527,451L529,452L530,453L531,455L532,456L532,457L532,459L532,461L533,461L533,462L534,464L535,465L535,467L536,469L537,469L537,471L538,472L537,473L538,474L537,476L537,477L536,479L536,480L535,482L534,483L535,485L534,486L533,488L535,489L534,491L535,492L534,493L534,495L533,497L532,499L531,499L532,502M292,445L290,444L290,442L291,440L313,442L345,445L357,446L359,423L360,418L360,415L361,407L361,402L363,373L364,365L365,349L365,345M273,233L287,235L296,236L316,239L320,239L328,240L343,241L356,243L373,244L389,245L388,267L387,275L387,283L387,287L385,311L385,314L384,335L372,334L371,334L367,334L354,333L343,332L332,331L329,331L310,329L299,328L275,325L261,323L262,311L264,297L264,294L266,284L266,280L271,244L273,233L256,231L253,231L240,228L241,220L242,216L243,206L245,193L246,190L249,169L251,159L252,154L252,151L253,148L253,143L254,140L258,140L259,141L264,141L267,142L269,142L273,143L284,144L315,148L334,150L335,150L343,151L363,153M885,175L886,177L887,181L888,184L888,188L888,190M861,205L859,203L862,199L861,198L860,195L859,189L858,181M502,271L500,270L501,268L499,267L499,265L498,265L497,264L496,262L496,260L496,259L494,259L514,258L523,258L531,257L535,257L547,256L556,256L562,255L563,257L564,258L565,259L566,260L568,260L566,264L566,265L567,268L568,270L568,272L569,273L569,275L571,276L572,277L573,279L575,280L576,281L580,284L581,286L581,287L582,289L582,291L582,292L584,294L585,293L585,291L587,291L588,292L592,294L591,295L590,297L591,298L590,301L589,303L588,304L588,307L588,308L590,309L591,311L593,311L593,312L595,313L596,314L596,315L597,315L599,315L600,316L601,317L603,319L604,319L605,321L604,322L606,325L606,327L604,328L606,329L606,332L607,332L609,334L608,333L610,334L612,334L612,337L611,338L612,339L611,340L612,342L611,344L609,343L607,346L606,346L607,345L605,344L605,346L605,348L606,349L604,349L606,351L605,352L603,352L605,353L605,354L603,355L603,357L591,358L592,356L593,355L594,353L595,352L596,349L595,348L594,347L572,348L543,349L515,350M770,253L772,264L774,262L775,260L777,259L778,257L780,257L781,256L782,253L783,253L785,254L786,254L788,254L788,252L789,251L791,251L792,249L794,249L795,250L796,250L798,250L798,251L799,253L800,253L801,255L801,256L800,261L790,255L790,256L790,257L790,260L790,261L790,263L788,265L788,267L787,268L785,269L784,272L782,271L782,272L781,274L781,275L780,276L780,279L778,281L775,281L774,279L772,278L771,281L772,282L771,283L770,285L770,286L769,288L769,290L768,292L767,294L765,296L764,299L764,300L766,301L764,303L765,304L762,307L761,305L759,307L757,309L755,308L756,309L755,311L751,312L750,313L748,312L746,311L746,313L745,313L744,314L742,315L741,314L740,313L738,313L737,310L735,309L736,309L735,308L733,308L732,307L731,306L728,304L727,302L726,301L726,300L724,298L722,296L723,295L723,292L722,290L723,290L725,289L727,289L727,286L728,285L728,283L727,281L728,280L728,278L729,276L730,275L731,276L732,277L734,276L734,275L733,273L734,273L734,271L735,270L737,269L737,267L738,265L740,266L741,265L743,264L744,262L745,261L746,259L747,257L747,256L747,254L747,252L748,251L748,248L748,247L749,244L749,243L749,241L749,239L748,238L748,236L749,235M568,260L568,259L568,257L568,255L570,254L572,253L573,251L573,250L574,248L575,246L575,244L574,242L572,241L572,239L572,238L574,236L576,236L578,236L579,235L580,234L582,234L583,233L584,231L585,230L585,228L587,227L587,225L587,223L586,220L583,218L582,217L581,214L580,214L578,213L581,212L594,211L597,211L608,210L611,210L620,209L624,209M630,315L629,316L628,317L628,318L628,320L630,321L626,323L624,324L622,324L622,327L623,328L624,330L623,331L622,332L620,331L618,330L615,329L614,329L612,330L612,331L611,332L612,334M603,357L604,359L603,359L603,361L602,362L600,363L599,364L599,365L601,365L599,366L600,368L598,367L598,369L598,371L597,369L596,371L596,372L597,373L596,375L598,375L598,377L596,377L595,380L594,380L595,382L594,383L592,384L591,383L591,385L591,386L590,386L591,387L590,389L590,388L589,389L590,391L589,392L590,394L588,395L588,396L586,395L587,396L585,397L585,399L584,398L584,399L585,399L585,400L584,400L584,401L584,403L582,403L582,404L581,404L582,405L581,407L582,408L580,409L581,410L582,411L580,411L579,411L580,412L579,414L579,415L579,416L580,416L580,418L581,417L581,416L580,418L581,421L582,420L582,421L582,423L581,423L580,424L581,425L580,426L566,427L555,427L545,427L527,428M32,157L41,160L46,161L49,162L51,163L57,165L59,165L65,167L67,167L76,170L82,172L94,175L99,176L92,203L88,218L86,225L84,234L83,237L82,241L83,243L89,251L94,259L97,264L110,284L117,293L132,316L143,334L154,350M850,266L844,267L840,268L839,267L832,242L832,241M568,190L568,192L568,193L570,194L570,196L569,197L569,198L569,200L569,202L569,203L571,207L573,208L576,209L578,211M494,258L494,256L492,255L493,253L493,252L493,250L493,249L493,248L492,245L492,243L492,242L491,241L492,238L490,238L490,236L489,236L488,234L488,233L489,231L489,230L489,229L488,228L488,226L486,225L486,223L485,222L485,221L484,219L484,217L484,215M682,280L683,279L684,280L686,280L687,279L689,280L691,280L691,282L693,283L693,285L696,286L698,285L700,286L701,287L703,288L704,287L705,286L708,287L709,288L712,287L712,286L713,285L715,284L716,283L716,285L717,287L719,287L721,289L722,290M736,308L730,315L728,316L726,317L725,318L724,319L724,321L723,322L722,323L722,325L720,326L719,326L718,328L717,329L715,330L712,331L711,331L709,333L703,334L693,335L688,336L685,336L680,336L677,337L671,337L667,338L662,338L659,338L657,338L648,339L642,340L635,341L631,340L632,343L632,344L623,344L615,345L609,345L607,346M849,276L843,278L842,279M813,263L814,261L817,263L815,266L815,264L813,263L811,262L811,261L809,261L807,261L806,260L806,258L805,257L803,256L801,256M697,218L683,221L675,222M623,150L621,149L620,148L621,146L621,144L620,145L618,145L618,144L618,143L619,141L619,139L618,138L617,137L616,136L614,136L613,135L614,134L613,133L611,132L609,132L607,132L605,131L604,131L602,131L597,129L581,126L580,122L578,122L577,122M594,381L609,380L632,378M615,488L613,487L613,485L613,484L612,483L611,481L609,479L609,477L609,475L609,474L609,472L610,471L589,471L574,472L575,470L574,469L574,468L573,466L575,466L576,465L575,464L574,463L576,463L575,461L575,460L577,459L577,458L576,458L576,457L578,457L577,455L580,454L578,454L578,452L580,453L581,451L582,449L583,449L582,447L583,448L584,446L584,445L581,446L581,444L583,444L585,444L585,442L587,440L584,441L585,439L584,439L582,438L584,438L582,436L584,435L582,436L581,434L583,433L581,432L581,430L582,429L582,427L581,428L580,428L580,426M252,151L251,151L250,148L249,145L248,144L246,145L245,147L246,149L244,148L242,148L240,148L240,147L238,147L236,147L235,147L233,146L232,146L231,148L230,147L227,147L225,146L224,148L224,149L222,147L221,147L222,145L221,143L221,141L221,139L219,138L217,138L216,136L216,134L217,133L216,131L215,129L214,127L214,125L214,124L213,122L214,121L214,119L212,118L212,117L211,116L210,118L208,119L207,119L206,120L205,120L204,119L203,118L202,118L202,116L203,115L203,113L204,111L205,112L205,110L205,108L206,106L205,104L207,103L208,100L209,99L208,97L210,95L210,94L208,94L207,94L205,93L206,92L204,92L204,91L202,89L202,88L202,87L201,85L201,84L200,82L199,81L198,80L198,78L197,78L195,77L193,73L194,73L193,71L194,70L193,69L193,67L193,64L190,60L191,55L192,53L195,38M871,162L870,161L868,160L868,158L869,157L869,155L868,153L868,150L868,149L868,145L867,143L868,140L869,138L868,136L869,135L869,133L870,131L869,129L868,127L868,126L870,125L872,124L873,122L874,121L874,119L874,117L872,115L873,114L873,112L873,111L872,109M844,116L845,118L845,120L846,121L845,122L846,123L846,125L848,127L848,128L848,130L849,132L848,134L848,136L848,137L849,139L850,141L850,142L851,143L850,145L851,147L851,146L853,147L855,154L857,162L857,163L858,165M70,69L71,69L71,71L72,72L73,73L75,72L78,75L78,77L79,78L79,81L78,82L78,84L78,85L79,87L82,88L83,89L85,90L86,89L87,90L91,89L92,88L95,89L97,89L98,90L100,90L101,91L101,93L103,92L105,93L107,93L109,93L111,93L112,94L114,94L116,94L117,94L119,94L121,93L124,93L126,94L127,93L129,93L132,93L134,94L136,94L145,95L168,101L168,103L169,105L171,106L172,107L173,110L171,112L170,114L168,116L168,118L167,120L165,121L164,123L164,124L163,125L162,126L160,127L159,129L158,131L157,132L156,132L156,134L156,136L155,137L157,137L157,139L158,140L159,141L158,142L158,143L158,144L157,146L156,147L147,188L137,185L121,182L120,181L99,176M709,333L711,333L716,332L726,331L730,330L739,329L744,328M173,308L177,291L178,286L178,283L179,277L181,271L187,239L187,237L190,225L191,220L195,198L198,199L214,201L225,203L243,206M181,35L180,40L178,49L176,54L174,67L168,91L168,94L168,96L167,98L168,101M195,198L188,196L186,196L182,195L179,194L157,190L147,188" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M50,497L52,496L54,495L55,494L56,494L58,493L60,492L62,492L64,492L64,493L64,495L64,496L66,496L68,496L69,497L71,497L71,495L73,496L72,494L70,495L71,493L70,492L69,491L69,490L70,491L70,492L71,493L72,494L71,492L71,491L72,490L70,489L69,489L68,489L66,488L66,487L65,484L64,483L63,481L62,480L60,479L60,478L59,477L60,476L61,474L62,474L65,474L66,474L68,473L69,471L70,469L71,467L72,466L72,465L74,464L76,464L77,464L79,463L80,461L82,460L83,461L85,461L86,460L87,459L88,458L90,458L91,459L90,460L91,461L92,460L92,459L94,460L94,461L95,461L97,461L98,461L99,461L99,462L100,463L101,464L102,464L104,464L105,464L107,463L108,463L109,464L110,465L112,465L113,465L114,465L116,465L118,466L119,466L121,466L122,465L123,464L125,465L126,465L128,466L129,466L131,467L143,526L144,533L145,538L147,539L149,539L150,537L152,536L152,539L154,539L155,541L160,544L161,545L163,544L164,542L164,541L165,540L165,539L167,537L168,538L169,538L170,540L171,540L172,541L173,542L176,543L177,545L179,546L180,548L181,549L182,550L184,551L185,552L185,553L187,554L187,555L188,555L189,557L190,556L192,557L194,557L195,557L197,558L198,558L198,560L198,562L200,563L200,565L199,567L199,568L198,569L197,568L196,567L196,565L196,564L195,562L194,561L195,562L195,564L196,565L195,566L195,565L194,566L193,566L192,565L192,564L192,562L191,562L191,563L191,565L190,565L189,563L189,562L189,560L189,562L188,563L187,561L186,561L187,560L187,558L186,557L185,556L184,556L183,554L182,555L180,555L181,553L180,552L179,551L181,551L179,550L177,549L176,549L176,547L176,546L175,547L174,548L173,547L172,546L171,544L170,543L169,542L168,541L169,542L168,542L169,543L170,545L171,546L171,547L172,548L170,548L169,548L168,548L168,547L167,545L166,544L167,546L165,546L164,545L165,546L166,547L167,547L168,549L167,549L166,550L164,549L163,549L162,549L161,548L160,547L158,546L156,545L155,545L153,544L151,544L152,542L151,541L151,539L150,541L149,542L147,543L146,543L144,542L144,540L143,541L142,541L141,541L140,541L138,541L136,542L134,543L133,543L133,544L133,543L132,542L130,542L130,540L129,541L128,540L126,540L127,539L125,540L125,541L124,542L123,541L124,540L125,540L127,539L125,539L125,538L124,539L123,538L124,538L123,537L123,536L124,535L123,535L122,537L121,536L121,537L120,537L120,536L120,538L118,538L118,537L119,535L118,536L117,537L117,538L118,539L117,541L118,541L118,542L119,544L119,545L118,545L117,544L117,545L116,545L114,545L113,546L113,544L113,546L113,547L112,546L112,548L111,547L110,549L110,550L110,549L109,549L108,550L107,551L106,552L105,552L104,552L104,550L105,550L106,549L107,547L106,548L105,548L104,547L104,545L105,544L105,543L106,541L105,540L107,539L108,538L109,537L110,538L111,538L113,538L114,538L113,538L111,537L110,536L111,535L112,534L111,534L110,536L108,536L106,536L106,537L105,538L104,539L104,540L103,540L102,542L101,543L101,544L101,546L100,547L99,547L99,548L98,549L97,547L97,549L96,550L95,551L95,551L94,553L96,553L97,554L98,554L97,556L96,557L95,558L95,559L94,560L93,561L92,561L91,562L90,563L88,564L88,565L87,565L86,566L85,566L85,568L84,569L83,570L82,570L81,570L80,571L78,572L79,573L77,573L76,573L77,574L76,576L75,576L74,577L72,577L71,578L70,579L70,578L69,577L68,578L67,579L65,579L64,580L63,580L62,579L60,581L60,581L59,582L57,582L57,580L57,582L56,583L55,582L54,583L54,585L53,584L52,585L50,584L49,585L48,586L46,586L46,584L47,584L48,582L50,582L51,581L53,581L53,583L54,581L55,581L56,580L58,579L59,577L60,577L61,576L63,576L64,575L65,575L65,577L66,578L66,576L67,577L67,575L68,574L69,573L70,572L71,571L73,570L74,570L75,570L76,568L77,567L78,566L79,565L80,565L80,564L80,560L81,559L81,558L81,557L82,556L83,555L83,554L82,555L80,555L78,556L78,555L77,554L77,553L76,554L76,555L76,557L75,557L74,556L74,555L73,554L71,554L71,553L70,552L69,552L68,553L66,554L65,555L63,554L62,554L64,554L64,552L64,551L63,549L64,549L65,547L64,546L64,545L63,543L63,542L62,544L61,544L60,544L57,545L56,544L56,542L55,541L54,540L53,539L52,538L53,537L54,535L54,534L53,533L52,533L52,532L51,531L50,529L52,529L51,528L52,528L52,526L55,524L56,523L56,522L57,519L58,518L60,517L61,518L62,520L64,519L66,517L66,516L67,517L69,517L70,517L71,516L72,514L72,513L72,512L71,510L70,509L72,509L73,508L72,507L71,506L70,507L68,507L67,508L66,510L66,508L65,507L65,509L64,508L62,507L61,507L59,508L57,507L56,507L54,506L54,505L54,503L53,502L54,501L55,500L53,499L52,499L51,498L50,497M850,344L850,343L854,340L855,339L857,338L858,336L857,331L856,329L855,327L857,329L857,330L858,333L858,339L856,339L854,341L851,343L850,344M301,575L302,573L304,571L305,570L304,567L304,564L306,564L307,564L309,566L310,567L313,567L317,569L319,570L321,573L321,575L323,575L323,576L325,579L327,580L327,581L325,583L324,584L322,585L320,586L319,586L318,586L316,587L314,588L313,588L311,590L311,591L309,594L308,592L306,591L304,591L304,589L304,587L304,584L304,582L303,581L303,579L302,577L301,575M287,549L288,548L288,547L290,547L291,549L292,550L294,549L295,548L297,549L299,550L302,552L302,553L301,555L299,556L296,556L294,557L293,556L292,552L291,552L289,551L288,550L287,549M274,545L276,544L277,543L281,543L284,544L286,543L287,544L285,546L283,546L279,545L278,545L276,545L274,545M254,534L257,534L259,533L260,532L262,533L263,535L263,537L265,538L266,537L265,538L267,541L266,541L264,542L262,540L260,540L258,541L257,539L256,538L255,536L254,534M888,190L886,190L885,191L884,192L882,192L880,194L877,195L875,195L874,195L872,196L870,197L868,199L866,200L865,201L863,203L862,204L861,205L859,207L860,208L861,208L863,206L864,205L865,205L867,205L868,205L869,204L870,203L875,202L877,201L879,199L880,197L881,196L882,196L881,197L883,198L885,197L886,198L888,197L889,196L886,199L882,202L879,204L875,207L872,209L870,211L868,211L864,213L861,214L858,216L857,215L856,214L856,213L856,215L854,218L855,219L857,219L858,218L859,220L859,222L859,225L859,230L860,233L858,238L858,240L858,242L857,243L855,245L854,247L853,250L852,253L851,254L850,255L849,253L850,251L850,250L848,249L847,249L845,250L844,249L843,248L841,247L839,247L839,246L837,245L837,243L836,242L837,240L835,242L836,243L836,245L838,246L840,248L841,249L841,251L842,254L843,254L844,256L846,259L848,258L849,261L850,266L850,269L850,273L849,276L849,278L848,280L846,280L846,282L845,284L845,286L845,287L844,290L844,292L844,294L844,295L843,297L842,298L841,299L841,298L840,297L840,296L839,294L840,293L840,291L840,289L840,288L840,286L841,284L842,283L842,281L841,281L842,279L840,279L839,281L838,280L839,278L838,277L837,277L837,275L838,274L837,273L837,271L836,273L836,274L835,272L835,271L834,273L834,275L833,275L831,273L831,272L829,270L830,269L829,268L830,266L831,267L832,267L831,266L830,265L829,264L828,265L827,263L828,262L829,262L829,260L827,260L826,262L826,260L827,258L829,259L828,257L829,256L828,257L827,255L827,252L827,251L828,249L830,249L830,247L830,245L828,246L828,247L826,250L826,249L825,250L826,252L825,250L825,252L824,254L823,255L821,253L822,254L824,256L824,257L825,258L824,260L824,261L824,262L823,264L824,265L825,268L825,269L826,270L828,272L828,273L827,274L829,274L829,276L830,277L831,280L829,278L828,277L828,279L827,278L825,277L824,277L822,277L821,275L821,276L819,276L818,275L817,273L816,274L814,276L813,273L813,271L814,270L815,269L813,270L812,273L812,275L813,276L815,276L816,275L818,275L817,276L819,277L821,279L823,278L825,278L827,280L828,281L830,282L831,282L833,283L833,284L832,287L832,288L830,288L829,288L828,287L826,286L825,286L823,284L822,283L823,284L825,286L826,287L828,289L829,290L831,289L833,290L833,292L834,292L835,294L835,296L834,295L832,294L833,296L834,297L833,297L834,299L835,299L836,301L836,302L835,303L834,304L833,302L831,302L830,301L829,299L828,299L826,299L825,299L824,300L825,300L826,300L828,301L828,299L829,302L830,303L831,303L833,304L833,305L835,305L836,305L836,303L838,304L840,304L841,303L843,305L844,308L845,309L846,311L848,316L850,319L852,322L855,326L853,324L852,322L849,319L848,316L847,315L847,314L845,312L844,313L845,314L846,315L847,317L848,318L849,320L848,320L846,318L845,318L846,319L847,319L845,319L842,318L843,319L844,320L842,321L841,320L841,321L840,322L838,321L837,321L839,322L840,322L838,323L838,325L836,325L834,325L833,323L832,322L833,320L832,321L832,323L833,325L834,326L834,327L837,327L839,325L841,326L843,324L845,324L846,324L846,327L847,331L847,328L847,326L848,325L849,324L851,325L852,326L852,329L852,331L852,332L850,332L850,333L849,334L848,336L848,338L847,338L845,339L843,339L841,339L839,338L838,336L840,336L838,336L837,337L838,338L839,339L836,339L834,339L832,339L830,338L831,339L833,339L837,340L840,340L841,341L841,343L840,344L840,345L839,346L837,349L833,348L833,349L835,350L837,350L839,348L842,347L843,346L843,347L845,347L844,346L845,346L846,348L845,350L844,350L843,351L843,353L843,354L842,354L841,353L841,354L843,355L844,352L846,350L847,348L849,344L848,346L847,348L846,350L845,352L844,353L843,356L840,355L838,355L834,357L832,358L831,359L829,361L827,363L826,364L824,367L823,368L822,371L821,373L821,375L821,377L821,378L819,377L818,377L816,377L815,378L813,378L810,380L807,382L806,383L804,386L803,389L802,390L801,392L801,395L801,397L800,398L799,399L799,401L796,402L795,402L794,403L795,404L793,406L791,408L789,408L790,409L790,410L789,411L788,412L786,413L785,414L783,416L781,417L780,417L781,418L781,420L779,421L778,422L776,421L776,422L777,423L777,424L775,426L774,427L775,428L775,429L773,430L773,432L771,432L772,433L772,434L771,435L769,436L771,436L771,437L771,439L769,440L770,440L769,443L769,444L769,447L768,449L768,450L768,452L766,453L768,453L768,454L768,457L768,459L769,461L769,463L770,465L771,467L773,475L775,477L778,483L781,488L783,492L789,500L792,503L793,504L794,505L793,507L793,509L794,512L794,514L796,516L799,521L801,524L801,525L803,528L805,532L806,534L807,536L809,540L810,545L810,548L811,552L811,558L811,561L811,563L811,565L809,564L809,566L809,568L808,570L809,572L809,573L808,574L810,573L811,570L811,571L809,576L809,577L807,579L805,582L804,584L806,581L807,580L807,577L805,576L803,578L802,578L800,578L798,579L795,580L793,580L792,578L792,577L793,576L792,573L791,572L790,571L788,569L787,569L786,567L784,567L783,566L781,565L780,566L778,564L777,561L776,558L775,556L772,553L771,552L769,554L769,552L768,550L767,550L768,549L769,547L769,545L768,544L767,544L768,547L766,548L765,547L763,545L761,542L760,540L758,538L756,535L755,534L754,533L753,532L754,533L755,532L756,531L757,528L758,527L759,525L759,523L757,523L758,525L756,525L756,523L753,521L753,523L753,524L755,524L756,526L755,528L754,529L754,530L753,528L752,527L750,525L750,522L750,521L749,518L750,519L750,521L750,518L751,517L751,515L751,513L752,511L752,509L751,508L750,506L750,503L750,502L748,500L748,499L747,497L743,497L743,498L742,496L740,495L739,494L738,492L736,491L735,490L734,488L734,487L732,486L730,485L729,484L728,482L726,481L723,480L721,479L719,480L716,480L715,482L716,484L714,484L712,484L710,486L705,489L705,488L703,490L701,490L702,491L703,492L705,491L707,490L709,488L708,490L706,491L703,492L702,492L701,492L699,491L698,491L697,492L696,490L695,488L696,489L696,491L697,488L696,487L694,486L693,485L692,485L691,484L689,483L687,482L684,480L681,479L677,478L675,478L670,478L668,478L665,479L660,481L658,481L654,482L651,483L648,484L644,484L646,483L649,483L648,482L646,480L645,478L646,477L645,475L643,474L642,475L642,477L642,478L642,481L642,482L641,482L639,481L638,481L637,482L635,483L634,482L633,482L631,482L630,483L629,482L627,482L625,482L623,483L621,484L619,484L619,483L619,485L617,486L617,487L615,488L614,488L612,489L611,490L610,491L609,493L611,493L612,495L614,495L615,492L616,491L617,490L617,492L619,493L620,491L621,492L620,493L620,494L621,494L619,495L620,496L618,496L618,497L618,499L617,498L616,499L617,500L615,499L613,500L615,500L613,500L614,501L613,502L615,503L616,504L618,505L619,505L620,506L622,507L625,508L625,509L626,508L625,510L626,511L624,513L623,513L622,512L620,514L619,515L620,514L620,512L621,511L621,509L620,510L619,511L617,509L615,508L610,507L606,510L603,513L602,512L601,509L600,510L600,508L599,507L598,509L597,509L596,510L595,511L594,512L592,513L592,514L591,514L590,513L589,512L586,512L584,511L582,510L581,509L583,508L584,509L586,510L585,508L583,507L583,506L581,507L581,506L581,505L579,506L578,504L577,502L575,502L575,500L573,500L571,501L570,500L571,499L570,498L568,498L567,499L565,500L564,500L565,501L566,501L566,503L567,502L565,504L563,505L562,505L556,504L554,503L550,501L548,501L545,500L543,500L539,500L535,501L534,501L532,502L529,503L527,503L518,508L516,509L515,510L516,508L518,507L520,506L519,505L515,506L515,504L516,502L516,501L515,501L513,501L512,503L511,502L510,503L510,505L510,507L512,507L512,508L512,510L512,511L509,513L508,514L507,516L508,515L510,514L512,512L513,511L515,511L514,512L509,515L508,516L505,518L502,521L497,524L494,526L490,527L486,529L484,531L483,532L482,533L478,535L476,537L473,540L471,542L470,544L469,545L466,549L465,553L464,555L463,559L463,561L463,563L463,567L464,571L465,574L466,578L467,583L466,579L465,573L463,572L464,572L464,570L462,567L462,565L462,560L463,555L464,551L466,548L467,547L468,545L468,544L469,542L470,542L472,538L474,537L476,536L478,534L480,533L482,533L482,531L479,533L477,533L477,531L475,531L475,533L475,535L473,536L472,538L470,537L468,537L466,539L468,539L470,538L470,539L467,544L466,543L464,543L462,543L460,544L462,544L463,546L465,547L464,550L463,553L462,555L461,556L460,556L461,554L458,556L460,557L462,557L462,559L461,563L461,567L461,571L462,572L462,574L464,578L464,580L464,581L465,583L466,583L467,586L465,586L463,586L463,588L461,588L460,587L459,586L457,584L455,584L453,583L451,583L449,583L447,583L444,582L443,581L441,579L438,579L437,579L435,577L433,576L432,576L431,575L429,575L428,574L427,572L426,570L426,568L425,566L425,565L424,564L423,563L422,561L421,560L422,558L422,556L421,555L421,554L421,552L421,551L421,549L420,548L419,547L417,547L416,545L415,544L413,543L413,542L412,540L411,539L411,537L410,536L407,534L407,533L406,532L405,530L404,528L404,526L403,525L402,524L402,522L401,520L400,518L399,517L400,516L399,514L398,513L397,510L395,509L394,508L393,507L392,506L390,505L388,504L388,501L388,503L387,501L386,500L386,498L384,498L383,497L380,498L379,497L377,497L376,497L374,496L371,496L371,495L369,495L367,497L364,496L362,497L361,498L360,499L359,501L358,502L358,503L357,505L356,507L356,509L355,509L354,510L352,511L351,513L349,513L347,512L345,512L344,509L342,509L340,508L339,506L335,505L334,504L333,503L331,501L330,500L329,499L327,498L325,497L325,493L324,492L324,491L323,490L322,488L323,486L323,484L323,483L322,481L321,480L320,479L320,475L319,474L318,472L316,471L314,469L313,469L311,468L308,464L308,462L306,461L305,460L303,457L302,456L301,455L299,454L297,453L297,451L296,449L295,447L293,445L292,445L260,441L259,451L243,449L239,448L217,445L205,443L182,430L169,423L163,419L140,405L141,404L141,402L143,401L115,397L98,395L98,393L98,392L96,392L97,390L97,389L97,387L98,384L97,381L95,376L94,375L93,373L91,370L90,369L88,367L87,365L85,364L83,365L82,364L81,363L82,362L81,359L81,357L80,356L78,356L76,356L75,356L73,354L71,353L69,351L68,348L67,346L66,345L64,344L62,343L60,342L58,342L56,341L55,340L51,339L48,339L48,337L46,336L47,333L47,331L48,329L47,328L48,326L49,323L48,322L46,320L45,319L47,317L46,315L45,314L43,312L43,310L41,309L41,307L41,306L40,304L39,301L38,299L38,297L37,295L35,293L34,290L35,288L35,286L36,284L36,285L38,284L39,281L39,278L38,277L35,276L33,275L32,272L32,271L31,270L31,269L32,266L32,264L31,263L31,261L32,259L33,257L35,256L35,259L34,261L36,262L37,264L38,266L38,264L38,263L38,260L37,259L36,257L37,256L37,255L35,253L37,252L38,253L38,251L37,249L35,250L35,251L35,252L34,253L35,255L34,256L32,255L31,253L29,252L28,249L26,249L27,247L28,244L28,243L27,241L27,239L26,238L24,236L23,232L22,230L21,228L20,225L21,224L21,221L21,218L21,216L22,214L23,212L24,210L23,208L24,206L23,204L22,201L21,199L20,198L18,194L19,193L19,191L19,190L20,188L21,186L25,182L26,181L27,179L27,176L29,174L31,170L31,168L31,165L31,163L30,162L31,160L32,159L32,157L31,156L31,155L31,153L31,151L31,149L32,147L33,144L33,142L33,140L32,137L34,136L35,135L36,133L37,131L38,129L39,128L41,125L43,121L46,116L47,112L49,109L50,105L51,104L52,101L52,99L53,97L55,93L56,91L57,88L58,87L58,85L59,83L60,80L61,79L61,76L61,75L62,73L63,71L63,67L64,69L66,69L68,69L70,69L68,68L67,68L65,68L64,66L63,66L63,64L64,62L65,59L65,60L64,62L64,64L65,64L65,62L67,61L66,59L69,58L68,57L67,57L65,56L65,53L67,53L70,53L68,51L66,50L66,52L66,47L66,44L66,42L66,38L66,37L67,34L66,32L66,30L65,29L65,27L65,25L65,23L66,22L67,20L66,19L69,20L71,22L72,23L74,25L76,26L79,28L81,29L83,29L86,31L88,30L89,31L90,32L91,34L91,35L91,33L92,32L93,33L93,34L94,33L94,35L93,38L92,39L90,41L91,39L89,41L87,42L84,45L83,47L84,48L86,48L84,47L87,43L89,42L90,42L91,41L92,40L94,39L94,37L95,38L95,42L94,41L94,43L94,44L93,46L93,47L92,49L91,50L90,53L89,51L90,49L88,51L89,53L88,54L87,53L87,51L88,49L86,50L86,52L87,54L88,55L89,54L91,52L91,51L92,52L93,51L95,51L95,49L95,47L95,46L96,45L95,44L96,43L97,41L98,40L99,38L100,38L100,37L99,34L99,33L98,32L98,34L98,35L97,34L97,32L97,31L99,31L99,30L98,28L98,27L96,27L97,25L98,25L98,26L100,24L101,24L100,22L101,20L99,19L99,21L98,20L98,18L97,16L97,15L99,14L108,17L113,18L120,20L128,22L146,27L164,31L181,35L195,38L207,41L219,43L229,45L239,47L258,50L269,52L281,54L321,59L333,61L341,62L362,64L371,64L381,65L414,67L425,68L440,69L461,69L472,69L477,69L491,69L503,69L503,61L504,62L506,61L507,62L509,67L510,72L510,73L511,75L512,76L514,76L516,76L517,77L520,77L523,77L523,79L526,80L527,79L528,79L530,77L532,77L535,77L539,79L541,79L540,80L540,81L543,81L543,82L544,83L545,86L546,85L546,84L547,83L550,82L550,84L552,85L555,86L555,87L556,88L557,88L557,89L558,88L560,88L562,88L564,86L566,85L567,84L568,86L569,87L572,87L574,87L575,87L579,86L580,87L581,88L583,89L585,88L586,88L588,88L587,89L585,90L584,91L582,92L579,93L576,95L573,96L570,98L568,99L565,103L564,104L561,108L559,109L558,110L557,112L555,114L551,117L551,118L552,119L553,120L555,119L557,118L559,118L562,116L563,115L565,115L566,114L567,113L569,113L571,114L570,116L569,117L570,118L568,121L571,119L574,120L575,120L576,121L577,120L580,119L582,118L584,117L585,115L587,114L590,114L591,114L594,112L595,110L597,110L598,110L599,108L600,106L602,104L604,104L605,103L605,102L606,101L609,99L612,98L615,98L616,99L615,100L613,100L611,102L610,104L609,106L607,107L607,109L606,110L606,113L606,115L607,113L609,111L611,110L610,111L609,113L610,111L612,111L614,110L616,111L617,112L619,113L621,115L622,117L623,118L625,119L627,119L629,118L630,119L632,119L633,119L633,117L635,117L635,119L637,117L639,116L642,113L646,112L648,112L650,112L652,112L655,110L656,110L658,110L660,109L659,111L659,113L659,115L660,116L662,116L665,115L666,116L667,116L668,114L671,114L671,113L673,113L673,115L674,118L674,119L672,120L672,121L674,121L676,121L677,124L678,124L680,124L679,122L682,121L684,123L684,125L682,125L680,125L678,125L676,125L675,125L671,126L669,125L668,125L666,124L666,126L665,128L666,129L664,129L662,128L661,126L659,125L656,125L654,125L653,125L652,127L651,128L648,128L647,128L646,129L644,129L643,129L641,130L641,132L640,133L639,134L638,134L637,135L637,136L635,136L636,135L636,134L638,132L637,131L636,133L634,132L633,134L632,136L631,135L631,134L630,136L628,137L627,140L626,143L625,144L624,146L622,150L622,152L622,153L620,154L619,154L619,156L618,158L617,161L617,163L618,164L619,162L620,161L621,160L623,156L624,155L626,155L627,152L628,150L628,148L630,148L631,145L632,145L632,147L631,150L630,151L629,153L629,154L628,155L628,157L627,158L627,161L626,162L625,168L626,169L626,171L624,173L624,174L623,178L623,179L624,182L623,185L622,187L621,189L621,192L622,194L622,196L623,198L623,200L623,201L624,202L624,204L624,206L624,209L625,211L624,213L625,215L626,217L627,219L628,222L629,223L630,225L631,226L632,226L634,228L636,227L637,227L640,225L642,224L644,222L645,220L647,215L648,212L649,210L650,208L650,204L650,201L650,198L649,195L648,192L645,188L645,187L644,184L642,182L643,179L644,176L643,174L642,172L643,170L644,167L645,165L645,163L645,160L645,158L646,156L647,156L647,154L647,153L648,152L649,151L650,151L651,150L652,149L653,146L654,145L654,147L655,148L653,150L654,151L654,153L654,155L656,152L655,150L656,152L655,153L655,155L656,154L658,151L658,149L658,146L657,145L657,143L658,142L659,141L662,140L663,140L662,139L661,138L660,136L661,134L663,132L661,132L665,131L669,132L670,133L672,133L674,133L676,134L677,136L679,135L681,137L682,137L684,138L686,138L687,139L689,142L691,144L689,144L688,145L688,147L690,148L691,151L691,153L691,154L691,155L691,157L692,160L690,161L689,162L688,164L689,167L687,167L685,169L684,171L684,173L684,176L686,176L687,177L689,177L690,174L691,174L691,172L691,170L693,170L692,169L693,169L694,168L695,167L697,167L699,165L701,166L703,168L705,171L706,175L707,178L708,183L709,185L710,187L710,189L710,192L710,195L710,196L709,198L708,199L707,198L708,195L706,195L705,196L706,198L704,199L705,201L705,202L704,203L702,204L701,206L702,209L701,210L701,211L700,212L699,213L699,215L697,216L698,218L699,219L702,220L704,220L705,221L707,222L708,220L709,221L710,221L712,223L714,224L717,222L718,222L719,221L722,220L724,220L726,219L728,218L729,216L731,215L733,212L737,210L739,209L740,208L744,206L747,204L750,202L750,200L753,199L756,197L757,196L760,193L762,191L763,190L765,189L765,187L766,186L767,184L768,183L768,181L767,180L765,179L765,177L764,176L763,173L765,172L767,171L770,170L772,169L774,168L776,168L778,168L783,168L784,168L785,168L787,169L790,168L792,167L794,166L795,167L797,166L799,165L800,164L801,162L803,161L804,159L806,159L807,157L807,156L806,152L804,152L806,150L807,150L805,148L804,149L803,148L802,146L802,144L805,143L805,141L807,140L808,139L809,137L810,135L811,132L813,130L815,127L818,124L820,122L822,121L823,121L829,120L832,119L838,117L839,117L844,116L848,115L855,113L857,113L860,112L873,109L872,107L873,106L873,104L873,103L874,101L875,102L877,102L877,101L878,99L880,100L880,101L881,100L881,98L881,97L882,97L884,97L882,95L882,92L883,91L884,90L885,88L884,87L885,86L886,85L886,83L885,82L885,80L884,78L884,76L885,74L886,73L885,66L892,47L894,47L896,50L898,51L900,50L901,49L902,49L904,47L905,47L906,45L907,45L909,45L911,46L914,48L915,49L919,59L923,71L923,73L923,74L924,75L924,78L926,78L928,79L929,79L931,79L930,81L931,82L932,83L932,85L934,87L935,88L935,86L937,86L938,87L939,88L941,90L942,93L942,94L940,98L939,98L938,97L937,98L938,99L937,100L936,101L935,101L937,102L936,104L935,103L933,103L932,104L932,106L930,107L929,108L928,107L927,108L927,111L926,112L925,112L923,110L924,108L923,109L921,110L922,111L923,112L922,115L923,116L923,118L922,117L920,115L920,114L920,113L919,112L918,112L917,110L917,108L916,110L914,111L915,112L915,113L915,115L915,116L915,118L916,118L916,120L914,121L914,123L913,124L913,123L912,123L912,122L911,124L910,125L909,126L908,126L908,127L907,127L907,129L906,130L905,128L903,130L902,131L901,132L901,134L901,135L899,136L899,138L899,139L898,140L897,141L897,143L897,145L897,147L895,151L896,153L897,156L899,156L900,156L900,158L899,158L897,159L898,160L897,161L896,163L897,164L896,166L897,165L899,165L900,166L901,167L903,168L903,170L904,171L905,171L906,173L907,175L909,175L911,175L912,174L915,172L914,170L914,169L913,168L911,167L910,168L909,167L911,167L913,167L915,169L916,171L917,174L917,176L916,175L914,175L912,177L910,177L909,178L909,179L907,180L905,182L904,183L903,184L902,184L904,183L905,182L906,180L905,177L904,176L904,178L901,180L902,182L900,183L899,183L898,184L897,183L897,181L897,184L896,185L896,182L896,181L897,180L895,181L895,180L893,179L894,181L892,181L894,182L894,184L894,185L894,188L892,188L890,189L888,191" fill="none" stroke="#c9bdf0" stroke-width="1.5" stroke-linejoin="round"/>
+        <g id="real-ivies">
+          <ellipse cx="855" cy="188" rx="62" ry="64" fill="none" stroke="#8b8fa8" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <rect x="888.7" y="159.1" width="10" height="10" transform="rotate(45 893.7 164.1)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Harvard</title></rect>
+          <rect x="865.8" y="189.6" width="10" height="10" transform="rotate(45 870.8 194.6)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Yale</title></rect>
+          <rect x="887.3" y="172.3" width="10" height="10" transform="rotate(45 892.3 177.3)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Brown</title></rect>
+          <rect x="862.7" y="135" width="10" height="10" transform="rotate(45 867.7 140)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Dartmouth</title></rect>
+          <rect x="851.6" y="204.9" width="10" height="10" transform="rotate(45 856.6 209.9)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Columbia</title></rect>
+          <rect x="802.9" y="177.7" width="10" height="10" transform="rotate(45 807.9 182.7)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Cornell</title></rect>
+          <rect x="835.6" y="228.3" width="10" height="10" transform="rotate(45 840.6 233.3)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Penn</title></rect>
+          <rect x="842.6" y="217.7" width="10" height="10" transform="rotate(45 847.6 222.7)" fill="#5b5f7a" stroke="#ffffff" stroke-width="1.5"><title>Princeton</title></rect>
+          <text x="855" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#5b5f7a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">REAL IVY LEAGUE</text>
+        </g>
+        <g>
+          <title>UC Berkeley — Berkeley, CA</title>
+          <circle cx="37.6" cy="255.8" r="15" fill="#003262" stroke="#ffffff" stroke-width="3"/>
+          <text x="37.6" y="260.8" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">1</text>
+        </g>
+        <g>
+          <title>UCLA — Los Angeles, CA</title>
+          <circle cx="82" cy="356" r="15" fill="#2774AE" stroke="#ffffff" stroke-width="3"/>
+          <text x="82" y="361" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">2</text>
+        </g>
+        <g>
+          <title>University of Michigan — Ann Arbor, MI</title>
+          <circle cx="691.1" cy="206.4" r="15" fill="#00274C" stroke="#ffffff" stroke-width="3"/>
+          <text x="691.1" y="211.4" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">3</text>
+        </g>
+        <g>
+          <title>University of Virginia — Charlottesville, VA</title>
+          <circle cx="793.4" cy="287.1" r="15" fill="#232D4B" stroke="#ffffff" stroke-width="3"/>
+          <text x="793.4" y="292.1" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">4</text>
+        </g>
+        <g>
+          <title>UNC Chapel Hill — Chapel Hill, NC</title>
+          <circle cx="792.7" cy="336" r="15" fill="#7BAFD4" stroke="#ffffff" stroke-width="3"/>
+          <text x="792.7" y="341" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">5</text>
+        </g>
+        <g>
+          <title>UT Austin — Austin, TX</title>
+          <circle cx="457" cy="489.1" r="15" fill="#BF5700" stroke="#ffffff" stroke-width="3"/>
+          <text x="457" y="494.1" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">6</text>
+        </g>
+        <g>
+          <title>University of Washington — Seattle, WA</title>
+          <circle cx="96.8" cy="44.4" r="15" fill="#4B2E83" stroke="#ffffff" stroke-width="3"/>
+          <text x="96.8" y="49.4" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">7</text>
+        </g>
+        <g>
+          <title>William &amp; Mary — Williamsburg, VA</title>
+          <circle cx="827.7" cy="297.9" r="15" fill="#115740" stroke="#ffffff" stroke-width="3"/>
+          <text x="827.7" y="302.9" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">8</text>
+        </g>
+      </svg>
+      <div class="map-legend">
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#003262;">1</span><div><strong>UC Berkeley</strong><span>Berkeley, CA</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#2774AE;">2</span><div><strong>UCLA</strong><span>Los Angeles, CA</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#00274C;">3</span><div><strong>University of Michigan</strong><span>Ann Arbor, MI</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#232D4B;">4</span><div><strong>University of Virginia</strong><span>Charlottesville, VA</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#7BAFD4;">5</span><div><strong>UNC Chapel Hill</strong><span>Chapel Hill, NC</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#BF5700;">6</span><div><strong>UT Austin</strong><span>Austin, TX</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#4B2E83;">7</span><div><strong>University of Washington</strong><span>Seattle, WA</span></div></div>
+      <div class="map-legend-item"><span class="map-legend-dot" style="background:#115740;">8</span><div><strong>William &amp; Mary</strong><span>Williamsburg, VA</span></div></div>
+      </div>
+      <div class="map-key">
+        <span class="map-key-item"><span class="map-key-dot"></span>Modern Public Ivies (numbered)</span>
+        <span class="map-key-item"><span class="map-key-diamond"></span>Actual Ivy League: Harvard, Yale, Brown, Dartmouth, Columbia, Cornell, Penn, Princeton</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <span class="section-tag">The List</span>
+    <h2>School Profiles</h2>
+    <div class="cards">
+
+      <div class="card" style="--c1:#003262; --c2:#FDB515;">
+        <div class="card-header">
+          <h3>University of California, Berkeley</h3>
+          <span class="card-meta">Founded 1868</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Berkeley, California</span>
+          <span class="school-colors"><span class="swatch" style="background:#003262;"></span><span class="swatch" style="background:#FDB515;"></span>Berkeley Blue &amp; California Gold</span>
+        </div>
+        <p>UC Berkeley is routinely ranked as the top public research university in the United States. Its academic reputation spans an unusually wide range of fields, from a top-ranked College of Engineering and Haas School of Business to a physics department with deep roots in the history of nuclear science and a rich tradition in the humanities and social sciences. Berkeley's faculty roster includes numerous Nobel laureates, MacArthur "genius grant" recipients, and members of the National Academy of Sciences. Its role at the center of the University of California system, combined with proximity to Silicon Valley, has made it a critical pipeline for technology, biotechnology, and public policy talent nationally and globally.</p>
+      </div>
+
+      <div class="card" style="--c1:#2774AE; --c2:#FFD100;">
+        <div class="card-header">
+          <h3>University of California, Los Angeles</h3>
+          <span class="card-meta">Founded 1919</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Los Angeles, California</span>
+          <span class="school-colors"><span class="swatch" style="background:#2774AE;"></span><span class="swatch" style="background:#FFD100;"></span>UCLA Blue &amp; Gold</span>
+        </div>
+        <p>UCLA has grown from a regional teachers' college into one of the most applied-to universities in the country, drawing more freshman applications annually than nearly any other institution in the nation. Its academic strengths are broad and deep: a top film school in Theater, Film and Television; a highly ranked David Geffen School of Medicine; strong programs in engineering, psychology, and political science; and an athletics program with one of the most decorated histories in collegiate sports. UCLA's location within Los Angeles gives it distinctive strength in entertainment, media, and entertainment law, alongside a substantial biomedical research enterprise anchored by its medical center.</p>
+      </div>
+
+      <div class="card" style="--c1:#00274C; --c2:#FFCB05;">
+        <div class="card-header">
+          <h3>University of Michigan</h3>
+          <span class="card-meta">Founded 1817</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Ann Arbor, Michigan</span>
+          <span class="school-colors"><span class="swatch" style="background:#00274C;"></span><span class="swatch" style="background:#FFCB05;"></span>Maize &amp; Blue</span>
+        </div>
+        <p>The University of Michigan is one of the oldest and most comprehensive public research universities in the country, with top-ranked programs spanning its Ross School of Business, College of Engineering, Law School, and School of Public Health. Michigan consistently ranks among the leading recipients of federal research funding, with particular strength in engineering, information science, and social science research through institutions like the Institute for Social Research. Its enormous and famously loyal alumni network, paired with a storied athletics tradition, gives graduates an unusually dense set of professional connections across nearly every industry and region of the country.</p>
+      </div>
+
+      <div class="card" style="--c1:#232D4B; --c2:#E57200;">
+        <div class="card-header">
+          <h3>University of Virginia</h3>
+          <span class="card-meta">Founded 1819</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Charlottesville, Virginia</span>
+          <span class="school-colors"><span class="swatch" style="background:#232D4B;"></span><span class="swatch" style="background:#E57200;"></span>Orange &amp; Blue</span>
+        </div>
+        <p>Founded by Thomas Jefferson and built around his architectural vision of an "Academical Village," UVA blends a distinctive undergraduate liberal arts culture with strong professional programs, including a highly regarded McIntire School of Commerce, Darden School of Business, and School of Law. UVA has long been noted for combining high selectivity and strong graduation outcomes with a public price tag, and it consistently posts among the best return-on-investment figures of any public university. Its honor code and student self-governance traditions remain distinctive parts of its academic culture.</p>
+      </div>
+
+      <div class="card" style="--c1:#7BAFD4; --c2:#13294B;">
+        <div class="card-header">
+          <h3>University of North Carolina at Chapel Hill</h3>
+          <span class="card-meta">Founded 1789</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Chapel Hill, North Carolina</span>
+          <span class="school-colors"><span class="swatch" style="background:#7BAFD4;"></span><span class="swatch" style="background:#13294B;"></span>Carolina Blue &amp; Navy</span>
+        </div>
+        <p>UNC Chapel Hill holds the distinction of being the first public university in the United States to enroll students and confer degrees. Today it anchors the Research Triangle alongside Duke and NC State, giving it substantial strength in biomedical and public health research through its Gillings School of Global Public Health and School of Medicine. UNC also maintains a highly regarded Kenan-Flagler Business School and a journalism school with a long tradition of producing working professionals. Its combination of research output, accessibility to in-state students, and athletic tradition has made it a perennial fixture near the top of public university rankings.</p>
+      </div>
+
+      <div class="card" style="--c1:#BF5700; --c2:#333F48;">
+        <div class="card-header">
+          <h3>University of Texas at Austin</h3>
+          <span class="card-meta">Founded 1883</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Austin, Texas</span>
+          <span class="school-colors"><span class="swatch" style="background:#BF5700;"></span><span class="swatch" style="background:#333F48;"></span>Burnt Orange &amp; Charcoal</span>
+        </div>
+        <p>UT Austin combines an enormous endowment — bolstered by the Permanent University Fund's oil and gas revenues — with a rapidly growing reputation in engineering, computer science, and business, aided considerably by its location in one of the country's fastest-growing technology hubs. Its Cockrell School of Engineering and McCombs School of Business are both nationally ranked, and the university has become an increasingly important feeder for Texas's booming semiconductor and technology sectors. UT Austin's scale — one of the largest single-campus enrollments in the country — allows it to sustain an unusually wide breadth of top-tier academic departments simultaneously.</p>
+      </div>
+
+      <div class="card" style="--c1:#4B2E83; --c2:#B7A57A;">
+        <div class="card-header">
+          <h3>University of Washington</h3>
+          <span class="card-meta">Founded 1861</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Seattle, Washington</span>
+          <span class="school-colors"><span class="swatch" style="background:#4B2E83;"></span><span class="swatch" style="background:#B7A57A;"></span>Purple &amp; Gold</span>
+        </div>
+        <p>The University of Washington is a dominant regional research power with a global footprint, consistently ranking among the top recipients of federal research funding in the country, particularly in medicine, public health, and computer science. Its School of Medicine and Foster School of Business are nationally regarded, and its Paul G. Allen School of Computer Science &amp; Engineering has become one of the most influential programs in the country, feeding directly into the Seattle-area tech ecosystem anchored by Amazon and Microsoft. UW's location has made it an increasingly essential pipeline for technology and biomedical talent on the West Coast, giving it an outsized institutional influence relative to its size.</p>
+      </div>
+
+      <div class="card" style="--c1:#115740; --c2:#916f41;">
+        <div class="card-header">
+          <h3>College of William &amp; Mary</h3>
+          <span class="card-meta">Founded 1693</span>
+        </div>
+        <div class="card-location">
+          <span>📍 Williamsburg, Virginia</span>
+          <span class="school-colors"><span class="swatch" style="background:#115740;"></span><span class="swatch" style="background:#916f41;"></span>Green &amp; Gold</span>
+        </div>
+        <p>The second-oldest institution of higher education in the United States, William &amp; Mary occupies a unique niche among the Public Ivies: a small, highly selective public liberal arts university rather than a sprawling research flagship. Its history is deeply intertwined with the American founding — alumni include Thomas Jefferson and James Monroe — and it maintains a strong tradition in government, law (home to the nation's oldest law school), and the humanities. William &amp; Mary demonstrates that the "public ivy" model need not require enormous scale, offering an intimate undergraduate experience alongside meaningful research output.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="on-the-map">
+    <span class="section-tag">Beyond The Rankings</span>
+    <h2>How Each One Put Itself On The Map</h2>
+    <p>Rankings and research dollars make the statistical case, but every school on this list also has its own singular claim to fame — a specific moment or achievement that defines it in the public imagination, independent of any ranking system.</p>
+    <div class="fame-grid">
+
+      <div class="fame-card" style="--c1:#003262;">
+        <span class="fame-icon">⚛️</span>
+        <div>
+          <h4>UC Berkeley</h4>
+          <p>Physicists at Lawrence Berkeley National Laboratory have discovered more chemical elements than any other institution in the world, including berkelium and californium — both literally named after the school and its home state.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#2774AE;">
+        <span class="fame-icon">💻</span>
+        <div>
+          <h4>UCLA</h4>
+          <p>The first message ever sent over ARPANET — the direct ancestor of the modern internet — was transmitted from a UCLA computer lab in October 1969, making the campus the literal birthplace of networked computing.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#00274C;">
+        <span class="fame-icon">🕊️</span>
+        <div>
+          <h4>Michigan</h4>
+          <p>In a 2 a.m. speech on the steps of the Michigan Union in October 1960, presidential candidate John F. Kennedy first floated the idea that would become the Peace Corps.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#232D4B;">
+        <span class="fame-icon">🏛️</span>
+        <div>
+          <h4>UVA</h4>
+          <p>Thomas Jefferson's "Academical Village" design for the Lawn and Rotunda is one of the only university campuses in the world to be designated a UNESCO World Heritage Site, alongside sites like the Taj Mahal and the Great Wall.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#13294B;">
+        <span class="fame-icon">🚀</span>
+        <div>
+          <h4>UNC Chapel Hill</h4>
+          <p>UNC's Morehead Planetarium secretly trained every Apollo astronaut, including Neil Armstrong and Buzz Aldrin, in celestial navigation before they ever set foot on the Moon.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#BF5700;">
+        <span class="fame-icon">🖥️</span>
+        <div>
+          <h4>UT Austin</h4>
+          <p>The Texas Advanced Computing Center has operated some of the most powerful supercomputers ever run by a university, including Frontera and Vista, putting UT Austin at the center of the nation's high-performance computing infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#4B2E83;">
+        <span class="fame-icon">🚣</span>
+        <div>
+          <h4>University of Washington</h4>
+          <p>The 1936 UW rowing team's gold medal at the Berlin Olympics — the true story behind <em>The Boys in the Boat</em> — put the university on the national map decades before its research reputation caught up.</p>
+        </div>
+      </div>
+
+      <div class="fame-card" style="--c1:#115740;">
+        <span class="fame-icon">🔑</span>
+        <div>
+          <h4>William &amp; Mary</h4>
+          <p>Phi Beta Kappa, the nation's oldest and most prestigious academic honor society, was founded at William &amp; Mary in 1776, the same year the country itself was founded.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="honorable-mentions">
+    <span class="section-tag">The Hard Part</span>
+    <h2>Close, But No Cigar: The First Four Out</h2>
+    <p>Enforcing a strict cap of eight required difficult omissions. The following world-class institutions sit directly on the bubble and represent our official honorable mentions — schools that clear several of our criteria convincingly, but not all four at once.</p>
+    <div class="honorable-list">
+
+      <div class="honorable-card">
+        <div class="honorable-card-header">
+          <span class="honorable-num">1</span>
+          <h4>University of Illinois Urbana-Champaign (UIUC)</h4>
+        </div>
+        <div class="honorable-point case">
+          <span class="label">The Case</span>
+          <p>Grainger College of Engineering and UIUC's CS program are elite global titans, ranked Top 5 alongside MIT and Stanford.</p>
+        </div>
+        <div class="honorable-point missed">
+          <span class="label">Why It Missed</span>
+          <p>Uneven general undergraduate selectivity across humanities and liberal arts compared to Michigan or UVA.</p>
+        </div>
+      </div>
+
+      <div class="honorable-card">
+        <div class="honorable-card-header">
+          <span class="honorable-num">2</span>
+          <h4>Georgia Institute of Technology</h4>
+        </div>
+        <div class="honorable-point case">
+          <span class="label">The Case</span>
+          <p>Elite admissions selectivity (roughly 13%) and engineering prowess that competes directly with MIT and Caltech.</p>
+        </div>
+        <div class="honorable-point missed">
+          <span class="label">Why It Missed</span>
+          <p>Operates primarily as a polytechnic specialist rather than a comprehensive university with medical and liberal arts depth.</p>
+        </div>
+      </div>
+
+      <div class="honorable-card">
+        <div class="honorable-card-header">
+          <span class="honorable-num">3</span>
+          <h4>University of Florida</h4>
+        </div>
+        <div class="honorable-point case">
+          <span class="label">The Case</span>
+          <p>A surging flagship that has leaped into the Top 6 US News public rankings, backed by high selectivity (roughly 23%) and huge state funding.</p>
+        </div>
+        <div class="honorable-point missed">
+          <span class="label">Why It Missed</span>
+          <p>Still building the century-old national brand clout enjoyed by regional peers UVA and UNC Chapel Hill.</p>
+        </div>
+      </div>
+
+      <div class="honorable-card">
+        <div class="honorable-card-header">
+          <span class="honorable-num">4</span>
+          <h4>University of Wisconsin&ndash;Madison</h4>
+        </div>
+        <div class="honorable-point case">
+          <span class="label">The Case</span>
+          <p>A massive research juggernaut with a multi-billion-dollar budget and world-class faculty.</p>
+        </div>
+        <div class="honorable-point missed">
+          <span class="label">Why It Missed</span>
+          <p>Edged out by direct regional counterpart Michigan in the Big Ten.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="comparison">
+    <span class="section-tag">The Fun Part</span>
+    <h2>How Our List Stacks Up Against the Real Ivy League</h2>
+    <p>Part of the appeal of a genuinely exclusive "Public Ivies" is that it invites a direct, one-to-one comparison with the actual Ivy League. Here's how we'd pair them off — not because these schools are identical to their private counterparts, but because each pairing shares a defining trait that makes the comparison click.</p>
+    <div class="ivy-table-wrap">
+      <table class="ivy-table">
+        <thead>
+          <tr>
+            <th>Public Ivy (Our List)</th>
+            <th>Actual Ivy League Member</th>
+            <th>Shared Defining Trait</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pub-ivy">UC Berkeley</td>
+            <td class="real-ivy">Harvard</td>
+            <td class="trait">Pinnacle of global academic prestige &amp; research</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">UCLA</td>
+            <td class="real-ivy">UPenn</td>
+            <td class="trait">Highly selective, urban, pre-professional power</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">University of Michigan</td>
+            <td class="real-ivy">Cornell</td>
+            <td class="trait">Massive comprehensive scale &amp; land-grant/public spirit</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">UVA</td>
+            <td class="real-ivy">Princeton</td>
+            <td class="trait">Historic tradition, architectural heritage &amp; undergrad focus</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">UNC Chapel Hill</td>
+            <td class="real-ivy">Brown</td>
+            <td class="trait">Deep public service spirit &amp; high-value student culture</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">UT Austin</td>
+            <td class="real-ivy">Columbia</td>
+            <td class="trait">Direct integration into a booming metro/economic hub</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">University of Washington</td>
+            <td class="real-ivy">Yale</td>
+            <td class="trait">Dominant regional powerhouse with massive global footprint</td>
+          </tr>
+          <tr>
+            <td class="pub-ivy">William &amp; Mary</td>
+            <td class="real-ivy">Dartmouth</td>
+            <td class="trait">Intimate, historic, undergraduate-first "colleges"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="pillars">
+    <span class="section-tag">Common Threads</span>
+    <h2>Key Pillars</h2>
+    <div class="callout">
+      <h3>What Sustains the Modern Public Ivy</h3>
+      <ul class="pillars">
+        <li>
+          <strong>Billion-Dollar Research Budgets</strong>
+          Each of these institutions now operates research enterprises exceeding a billion dollars annually, funded through a mix of federal grants, state appropriations, and private partnerships, enabling large-scale work in medicine, engineering, and the sciences that smaller private institutions simply cannot match in scale.
+        </li>
+        <li>
+          <strong>World-Class Faculty</strong>
+          Decades of sustained investment have allowed these universities to recruit and retain faculty at the very top of their fields, including Nobel laureates, National Academy members, and leading voices across the humanities and professional schools.
+        </li>
+        <li>
+          <strong>Expansive Alumni Networks</strong>
+          Because these universities graduate far larger classes than their private peers, their alumni networks are correspondingly vast, creating dense professional and philanthropic connections that span virtually every industry, region, and level of seniority.
+        </li>
+        <li>
+          <strong>Strong Graduate Outcomes</strong>
+          Across employment placement, graduate and professional school admission, and long-term earnings, these universities post outcomes that rival elite private institutions, while serving a student body many times larger and considerably more socioeconomically diverse.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="by-the-numbers">
+    <span class="section-tag">Receipts</span>
+    <h2>By The Numbers</h2>
+    <p>Qualitative arguments about prestige only go so far — so here's the harder evidence behind the claims made above. Beyond the basics of acceptance rates and endowments, the numbers that actually separate this list from the broader thirty-school version are things like national research rank, faculty honors at the level of the Nobel Prize and the National Academy of Sciences, and alumni outcomes that compete directly with the real Ivy League rather than just approaching it.</p>
+    <div class="stats-grid">
+
+      <div class="stat-card" style="--c1:#003262;">
+        <h4>UC Berkeley</h4>
+        <div class="stat-row"><span class="stat-label">US News public rank</span><span class="stat-value">#1 (2026)</span></div>
+        <div class="stat-row"><span class="stat-label">National Academy of Sciences members</span><span class="stat-value">145</span></div>
+        <div class="stat-row"><span class="stat-label">Current faculty Nobel laureates</span><span class="stat-value">11</span></div>
+        <div class="stat-row"><span class="stat-label">Acceptance rate</span><span class="stat-value">~11%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#2774AE;">
+        <h4>UCLA</h4>
+        <div class="stat-row"><span class="stat-label">US News public rank</span><span class="stat-value">#2 (2026)</span></div>
+        <div class="stat-row"><span class="stat-label">Annual research spend</span><span class="stat-value">~$1.9B</span></div>
+        <div class="stat-row"><span class="stat-label">National research rank</span><span class="stat-value">~#4 overall</span></div>
+        <div class="stat-row"><span class="stat-label">Acceptance rate</span><span class="stat-value">~9%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#00274C;">
+        <h4>Michigan</h4>
+        <div class="stat-row"><span class="stat-label">US News public rank</span><span class="stat-value">#3 (2026)</span></div>
+        <div class="stat-row"><span class="stat-label">Annual research spend</span><span class="stat-value">~$2.1B</span></div>
+        <div class="stat-row"><span class="stat-label">National research rank</span><span class="stat-value">#2 of all US universities</span></div>
+        <div class="stat-row"><span class="stat-label">Forbes billionaire-alumni rank</span><span class="stat-value">#7 (only public, inland school in top 10)</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#232D4B;">
+        <h4>UVA</h4>
+        <div class="stat-row"><span class="stat-label">US News public rank</span><span class="stat-value">T-4 (2026)</span></div>
+        <div class="stat-row"><span class="stat-label">Endowment</span><span class="stat-value">~$9.5B+</span></div>
+        <div class="stat-row"><span class="stat-label">Out-of-state acceptance rate</span><span class="stat-value">~10%</span></div>
+        <div class="stat-row"><span class="stat-label">Acceptance rate (overall)</span><span class="stat-value">~13%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#13294B;">
+        <h4>UNC Chapel Hill</h4>
+        <div class="stat-row"><span class="stat-label">US News public rank</span><span class="stat-value">T-4 (2026)</span></div>
+        <div class="stat-row"><span class="stat-label">Federal social-science research funding</span><span class="stat-value">#1 nationally</span></div>
+        <div class="stat-row"><span class="stat-label">Annual research spend</span><span class="stat-value">$1.2B+</span></div>
+        <div class="stat-row"><span class="stat-label">Out-of-state acceptance rate</span><span class="stat-value">~8%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#BF5700;">
+        <h4>UT Austin</h4>
+        <div class="stat-row"><span class="stat-label">National public-university rank</span><span class="stat-value">Top 10</span></div>
+        <div class="stat-row"><span class="stat-label">Endowment</span><span class="stat-value">~$20.9B</span></div>
+        <div class="stat-row"><span class="stat-label">Annual research spend</span><span class="stat-value">~$1.1B</span></div>
+        <div class="stat-row"><span class="stat-label">Out-of-state acceptance rate</span><span class="stat-value">~10–13%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#4B2E83;">
+        <h4>University of Washington</h4>
+        <div class="stat-row"><span class="stat-label">Federal research funding rank</span><span class="stat-value">Top 5 nationally</span></div>
+        <div class="stat-row"><span class="stat-label">Annual research spend</span><span class="stat-value">~$1.5B</span></div>
+        <div class="stat-row"><span class="stat-label">Computer science admit rate</span><span class="stat-value">Single digits</span></div>
+        <div class="stat-row"><span class="stat-label">Acceptance rate (overall)</span><span class="stat-value">~45%</span></div>
+      </div>
+
+      <div class="stat-card" style="--c1:#115740;">
+        <h4>William &amp; Mary</h4>
+        <div class="stat-row"><span class="stat-label">Founded</span><span class="stat-value">1693 (2nd-oldest in US)</span></div>
+        <div class="stat-row"><span class="stat-label">Law school founded</span><span class="stat-value">1779 (oldest in US)</span></div>
+        <div class="stat-row"><span class="stat-label">Endowment</span><span class="stat-value">~$1.45B for ~7,000 undergrads</span></div>
+        <div class="stat-row"><span class="stat-label">Acceptance rate</span><span class="stat-value">~34%</span></div>
+      </div>
+
+    </div>
+    <p>Taken together, the pattern holds across every criterion we set out to test. Three of these eight — Berkeley, UCLA, and Michigan — are ranked by US News as the top three public universities in the country, full stop. Michigan and UCLA post national research expenditure ranks (#2 and #4 respectively) ahead of several individual Ivy League schools. UVA's out-of-state admission rate of roughly 10% is tighter than Cornell's overall acceptance rate. And UNC's out-of-state rate of roughly 8%, driven by a state-mandated enrollment cap, is competitive with Brown's. This is not a list of "very good state schools" — it is a list of institutions that are, by the numbers, operating in the same tier as the private Ivy League, not merely adjacent to it.</p>
+    <div class="stats-source-note">
+      📊 <strong>On precision:</strong> figures above are rounded and change year to year — acceptance rates shift with each admissions cycle, rankings are refreshed annually by US News and Niche, and research expenditures are reported annually via the NSF's HERD survey. Treat these as directionally accurate snapshots that support the argument, not a live scoreboard.
+    </div>
+  </section>
+
+  <section id="conclusion">
+    <span class="section-tag">Wrapping Up</span>
+    <h2>Conclusion</h2>
+    <p>Richard Moll's original "Public Ivies" concept was, at its core, an argument about access: that academic excellence did not need to be rationed exclusively through small, expensive, private institutions. Four decades later, the Modern Public Ivies demonstrate that this argument has only strengthened with time. As the cost of private higher education continues to climb and public skepticism about the value of a college degree grows, these flagship universities are increasingly positioned as the standard-bearers of a higher education model that is simultaneously excellent and accessible. The map makes the point visually: the real Ivy League is a tight cluster of eight campuses in a single corner of the country, while the Modern Public Ivies stretch from the Pacific Northwest to the Texas hill country to the Virginia tidewater. That reach is no accident. These universities exist to serve the people of their states, so their excellence is spread across the country instead of concentrated in one region.</p>
+    <p>Looking forward, the role of these institutions is likely to become even more consequential. As state governments and the federal government grapple with questions of research funding, affordability, and workforce development, public flagships sit at the intersection of all three. Their continued ability to attract world-class faculty, produce cutting-edge research, and graduate large, capable cohorts of students at a fraction of private-school cost suggests that the "Public Ivy" model — far from a relic of 1985 — may be one of the more durable and important institutional structures in American higher education's future.</p>
+  </section>
+
+  <footer>
+    The Modern Public Ivies &middot; An Analysis of Public Flagship Universities
+  </footer>
+
+</div>
+</body>
+</html>
